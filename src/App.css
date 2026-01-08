@@ -16,32 +16,32 @@
 
 @layer base {
     h1 {
-        @apply text-[64px] xl:text-[128px] leading-[96px] xl:leading-[192px] font-bold;
+        @apply text-[64px] 2xl:text-[128px] leading-[96px] 2xl:leading-[192px] font-bold;
         font-family: 'Manrope', system-ui, sans-serif;
         
   }
     h2 {
-        @apply xl:text-[90px] xl:leading-[135px] text-[45px] leading-[68px] font-bold;
+        @apply 2xl:text-[90px] 2xl:leading-[135px] text-[45px] leading-[68px] font-bold;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     h3 {
-        @apply xl:text-[64px] xl:leading-[96px] text-[32px] leading-[48px];
+        @apply 2xl:text-[64px] 2xl:leading-[96px] text-[32px] leading-[48px];
         font-family: 'Manrope', system-ui, sans-serif;
   }
     h4 {
-        @apply xl:text-[45px] xl:leading-[68px] text-[23px] leading-[35px] font-bold;
+        @apply 2xl:text-[45px] 2xl:leading-[68px] text-[23px] leading-[35px] font-bold;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     h5 {
-        @apply xl:text-[32px] xl:leading-[48px] text-[22px] leading-[38px] font-bold;
+        @apply 2xl:text-[32px] 2xl:leading-[48px] text-[22px] leading-[38px] font-bold;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     h6 {
-        @apply xl:text-[23px] xl:leading-[35px] text-[18px] leading-[30px] font-bold;
+        @apply 2xl:text-[23px] 2xl:leading-[35px] text-[18px] leading-[30px] font-bold;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     p {
-        @apply xl:text-[15px] xl:leading-[21px];
+        @apply 2xl:text-[15px] 2xl:leading-[21px];
         font-family: 'Manrope', system-ui, sans-serif;
   }
 }
@@ -57,27 +57,27 @@
   }
 
     .text-h1 {
-        @apply text-[64px] xl:text-[128px] leading-[96px] xl:leading-[192px] font-bold;
+        @apply text-[64px] 2xl:text-[128px] leading-[96px2] 2xl:leading-[192px] font-bold;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-h2 {
-        @apply xl:text-[90px] xl:leading-[135px] text-[45px] leading-[68px] font-bold;
+        @apply 2xl:text-[90px] 2xl:leading-[135px] text-[45px] leading-[68px] font-bold;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-h3 {
-        @apply xl:text-[64px] xl:leading-[96px] text-[32px] leading-[48px];
+        @apply 2xl:text-[64px] 2xl:leading-[96px] text-[32px] leading-[48px];
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-h4 {
-        @apply xl:text-[45px] xl:leading-[68px] text-[23px] leading-[35px] font-bold;
+        @apply 2xl:text-[45px] 2xl:leading-[68px] text-[23px] leading-[35px] font-bold;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-h5 {
-        @apply xl:text-[32px] xl:leading-[48px] text-[22px] leading-[38px] font-bold;
+        @apply 2xl:text-[32px] 2xl:leading-[48px] text-[22px] leading-[38px] font-bold;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-h6 {
-         @apply xl:text-[23px] xl:leading-[35px] text-[18px] leading-[30px] font-bold;
+         @apply 2xl:text-[23px] 2xl:leading-[35px] text-[18px] leading-[30px] font-bold;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-gradient {

@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    id: 0,
-    name: "Marco",
-    surname: "Scinetti",
-    email: "marco.scinetti@gmail.com",
-    address: "Via valeriana 69, 23015",
-    accessToken: "0490dsfadaa",
-    refreshToken: null,
+    // id: 0,
+    // name: "Marco",
+    // surname: "Scinetti",
+    // email: "marco.scinetti@gmail.com",
+    // address: "Via valeriana 69, 23015",
+    // accessToken: "0490dsfadaa",
+    // refreshToken: null,
     orders: [
         {
             id: 0,

@@ -22,7 +22,7 @@ import DecrementIcon from "./Icons/DecrementIcon.component.";
         }
 
         return (
-            <div className={`border-1 flex flex-col gap-[24px] p-[24px] rounded-[18px] bg-black/10 border-[2px] border-black ${className}`}>
+            <div className={`shadow-md border-1 flex flex-col gap-[24px] p-[24px] rounded-[18px] bg-black/10 border-[2px] border-black ${className}`}>
                 <h5>Prodotti</h5>
                 <div className="grid grid-cols-4 gap-[24px]">
                     {list.map(element => {
@@ -32,13 +32,13 @@ import DecrementIcon from "./Icons/DecrementIcon.component.";
                                     <p>{element.title}</p>
                                 </div>
                                 <div>
-                                    <p>{element.price ? `${element.price} €` : ""}</p>
+                                    <p className="">{element.price ? `${element.price} €` : ""}</p>
                                 </div>
                                 <div>
-                                    <p>{element.quantity ? `x ${element.quantity}`: ""}</p>
+                                    <p className="font-bold">{element.quantity ? `x ${element.quantity}`: ""}</p>
                                 </div>
                                 <div>
-                                    <button className="shadow-xl border-[1px] border-black/25 text-black text-h6 hover:shadow-xl rounded-full bg-white hover:bg-black/10 active:opacity-50" onClick={() => handleClick(element.id)}>
+                                    <button className="border-[1px] border-black/25 text-black text-h6 rounded-full bg-white hover:bg-black/10 active:opacity-50" onClick={() => handleClick(element.id)}>
                                         <DecrementIcon />
                                     </button>
                                 </div>

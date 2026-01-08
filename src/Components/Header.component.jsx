@@ -22,7 +22,7 @@ const Header = () => {
                             <NavLink to="catalog" className="hover:opacity-50">Categorie</NavLink>
                         </div>
                     </div>
-                    <div className="focus-within:outline-1 focus-within:outline-[#2C2725]/25 hidden xl:flex justify-between rounded-[18px] shadow-md py-[8px] px-[16px] bg-[#2C2725]/5 xl:w-[569px] sm:w-[450px] w-[200px] 2xl:absolute 2xl:left-1/2 2xl:-translate-x-1/2">
+                    <div className="focus-within:outline-1 focus-within:outline-[#2C2725]/25 hidden xl:flex justify-between rounded-[18px] py-[8px] px-[16px] bg-[#2C2725]/5 xl:w-[569px] sm:w-[450px] w-[200px] 2xl:absolute 2xl:left-1/2 2xl:-translate-x-1/2">
                         <input type="text" className="focus:outline-none w-full border-0 rounded-[18px] px-[8px]" placeholder="" />
                         <button className="group">
                             <SearchIcon />

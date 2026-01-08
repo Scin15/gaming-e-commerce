@@ -22,7 +22,7 @@ const GameCard = ({ product, className}) => {
                 <div className="card flex-col text-left text-h6 mb-[64px]">
                     <div className="relative overflow-hidden rounded-[18px]">
                         <div className="absolute left-[8px] top-[8px] z-100 rounded-full bg-white">
-                            <PlatformIcon width={32} height={32} id={product.id}/>
+                            <PlatformIcon width={32} height={32} id={product.platform_id}/>
                         </div>
                         <NavLink to={`/gameDetail/${product.id}`}>
                             <img className=" w-full h-full hover:scale-110 active:opacity-75 transition-transform duration-300" src={product.cover_image_url} alt="" />

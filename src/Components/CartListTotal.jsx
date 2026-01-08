@@ -2,8 +2,8 @@
     const CartListTotal = ( {total, discount, className } ) => {
 
         return (
-            <div className={`border-1 flex flex-col gap-[24px] p-[24px] rounded-[18px] bg-black/10 border-[2px] border-secondary ${className}`}>
-                <h5>Riepilogo</h5>
+            <div className={`shadow-md border-1 flex flex-col gap-[24px] p-[24px] rounded-[18px] bg-black/10 border-[2px] border-secondary ${className}`}>
+                <h5 className="text-secondary">Riepilogo</h5>
                 <div className="grid grid-cols-2 gap-[24px]">
                                 <div>
                                     <p>Totale</p>
