@@ -45,10 +45,10 @@ Vincitore di oltre 80 riconoscimenti, Control è uno spettacolare gioco d’azio
         category_desc: "azione",
         cover_image_url: "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAzNDA5MiwicHVyIjoiYmxvYl9pZCJ9fQ==--fcc37d363256f1b7399a66400ea69f0ab2effd23/2000000000069575620",
         images_url: [
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTE5OTU5NDEsInB1ciI6ImJsb2JfaWQifX0=--dee5738e4acdde626bd901a4fca279699df3f9ea/2000000000087958751",
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTE5OTU5NDEsInB1ciI6ImJsb2JfaWQifX0=--dee5738e4acdde626bd901a4fca279699df3f9ea/2000000000087958751",
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTIwNTM1NDgsInB1ciI6ImJsb2JfaWQifX0=--f7e7db54493c45f567bc7c34177035c0b2cf6f4b/2000000000060090865",
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAzODc0NCwicHVyIjoiYmxvYl9pZCJ9fQ==--762ccea933f01cacde028cc4f9ffcf3b0a4c69a6/2000000000060090745",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAzNDY2MCwicHVyIjoiYmxvYl9pZCJ9fQ==--aa98d6d1b4df7656045bfceca5306f2e5e1d6f9e/2000000000069811868",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAzNDg1OCwicHVyIjoiYmxvYl9pZCJ9fQ==--9c5f50f70a482987426f2271749fe65bcd2b8d6f/2000000000069812050",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA0Mjk3NCwicHVyIjoiYmxvYl9pZCJ9fQ==--be27bfee473b0bc8556596dfb3dfa3cd1f588017/2000000000069811867",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAzNTUzMiwicHVyIjoiYmxvYl9pZCJ9fQ==--74a753f4d6b3380a4a827db3965608f4387902ba/2000000000069812191",
         ],
     },
     {   id: 3,
@@ -65,9 +65,9 @@ Il gioco base segue tre storie di base, tra cui il giocatore può scegliere quel
         category_desc: "sparatutto",
         cover_image_url: "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA0MTA5NywicHVyIjoiYmxvYl9pZCJ9fQ==--d364f872cb5dad08820c76fa818edb818f8964a3/2000000000075938885",
         images_url: [
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTE5OTU5NDEsInB1ciI6ImJsb2JfaWQifX0=--dee5738e4acdde626bd901a4fca279699df3f9ea/2000000000087958751",
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTE5OTU5NDEsInB1ciI6ImJsb2JfaWQifX0=--dee5738e4acdde626bd901a4fca279699df3f9ea/2000000000087958751",
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTIwNTM1NDgsInB1ciI6ImJsb2JfaWQifX0=--f7e7db54493c45f567bc7c34177035c0b2cf6f4b/2000000000060090865",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTIxNjY2OTMsInB1ciI6ImJsb2JfaWQifX0=--cd8719a7c0a02e1f38fb8d1b2210ca7320b87f0b/2000000000051821299",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA0MTk0NSwicHVyIjoiYmxvYl9pZCJ9fQ==--bbaf652231e554b51c0b630844dd06f5d10ba636/2000000000075940414",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA0MTczMiwicHVyIjoiYmxvYl9pZCJ9fQ==--04c8c6367f22792ebf6976693557c73fdbb2256f/2000000000075940383",
             "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAzODc0NCwicHVyIjoiYmxvYl9pZCJ9fQ==--762ccea933f01cacde028cc4f9ffcf3b0a4c69a6/2000000000060090745",
         ],
     },
@@ -122,6 +122,84 @@ Skyrim Special Edition introduce anche la potenza delle Creazioni di Bethesda Ga
         ],
     },
     {   id: 7,
+        title: "Kingdom Come: Deliverance",
+        price: 60,
+        platform_id: 0,
+        platform_desc: "Steam",
+        game_desc: `Il gioco:
+
+Tu sei Henry, il figlio di un fabbro. Colpito da una violenta guerra civile, assisti impotente all’invasione del tuo villaggio e al massacro dei tuoi amici e della tua famiglia. Sfuggito a malapena a questo attacco brutale, raccogli la tua spada per combattere: vendica la morte dei tuoi genitori e aiuta a respingere gli invasori!
+La storia:
+
+La Boemia è una regione nel cuore dell’Europa, ricca di cultura, argento e castelli. Con la morte dell’amato sovrano, l’imperatore Carlo IV, il regno è piombato in un periodo di oscurità: guerra, corruzione e tensioni stanno facendo a pezzi questo gioiello del Sacro Romano Impero.
+Nel mentre, la corona è stata ereditata da Venceslao, uno dei figli di Carlo. A differenza di suo padre, Venceslao è ingenuo, sprovveduto e senza alcuna ambizione. Il suo fratellastro e re dell’Ungheria, Sigismondo la Volpe Rossa, ha capito le debolezze di Venceslao e, fingendo buone intenzioni, si è recato in Boemia per rapire il suo fratellastro. Con la corona vacante, Sigismondo è ora libero di saccheggiare la Boemia e impadronirsi delle sue ricchezze.
+
+Nel bel mezzo di questo caos ci sei tu, Henry, il figlio di un fabbro. La tua vita tranquilla è stata distrutta da un’incursione di mercenari ordinata da re Sigismondo in persona: del tuo villaggio rimane solo la cenere, ma il fato beffardo ha fatto di te l’unico superstite di questo massacro.
+
+Senza una casa, una famiglia o un futuro, finisci al servizio di Radzig Kobyla, un signore feudale che si sta opponendo all’invasione. Finisci così all’interno di una sanguinosa guerra civile, dove lotterai per il futuro della Boemia.`,
+        category_id: 2,
+        category_desc: "gdr",
+        cover_image_url: "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA1NzEwMSwicHVyIjoiYmxvYl9pZCJ9fQ==--c53b9ab9b14ac10208771330dc4af2c30cb8dc8a/2000000000037830126",
+        images_url: [
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTk3NjM4LCJwdXIiOiJibG9iX2lkIn19--65502e93aed50fdc453eb0da960ec35a697d20e8/capture0",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTk3NjQ0LCJwdXIiOiJibG9iX2lkIn19--a2b57bb4fcf1c032950f348d9d7da0133d3bd00a/capture3",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA2MDEyOSwicHVyIjoiYmxvYl9pZCJ9fQ==--aafa788b517df2268c99324e30fda838096fe2b9/2000000000037825656",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA2MTQxNiwicHVyIjoiYmxvYl9pZCJ9fQ==--00e74d5813ef95ec95b4f43be417cd12abf42e17/2000000000037825585",
+        ],
+    },
+    {   id: 8,
+        title: "The Witcher 3",
+        price: 60,
+        platform_id: 0,
+        platform_desc: "Steam",
+        game_desc: `Il gioco:
+
+Tu sei Henry, il figlio di un fabbro. Colpito da una violenta guerra civile, assisti impotente all’invasione del tuo villaggio e al massacro dei tuoi amici e della tua famiglia. Sfuggito a malapena a questo attacco brutale, raccogli la tua spada per combattere: vendica la morte dei tuoi genitori e aiuta a respingere gli invasori!
+La storia:
+
+La Boemia è una regione nel cuore dell’Europa, ricca di cultura, argento e castelli. Con la morte dell’amato sovrano, l’imperatore Carlo IV, il regno è piombato in un periodo di oscurità: guerra, corruzione e tensioni stanno facendo a pezzi questo gioiello del Sacro Romano Impero.
+Nel mentre, la corona è stata ereditata da Venceslao, uno dei figli di Carlo. A differenza di suo padre, Venceslao è ingenuo, sprovveduto e senza alcuna ambizione. Il suo fratellastro e re dell’Ungheria, Sigismondo la Volpe Rossa, ha capito le debolezze di Venceslao e, fingendo buone intenzioni, si è recato in Boemia per rapire il suo fratellastro. Con la corona vacante, Sigismondo è ora libero di saccheggiare la Boemia e impadronirsi delle sue ricchezze.
+
+Nel bel mezzo di questo caos ci sei tu, Henry, il figlio di un fabbro. La tua vita tranquilla è stata distrutta da un’incursione di mercenari ordinata da re Sigismondo in persona: del tuo villaggio rimane solo la cenere, ma il fato beffardo ha fatto di te l’unico superstite di questo massacro.
+
+Senza una casa, una famiglia o un futuro, finisci al servizio di Radzig Kobyla, un signore feudale che si sta opponendo all’invasione. Finisci così all’interno di una sanguinosa guerra civile, dove lotterai per il futuro della Boemia.`,
+        category_id: 2,
+        category_desc: "gdr",
+        cover_image_url: "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTIxNDI3NzYsInB1ciI6ImJsb2JfaWQifX0=--2206c7ba52330ee47205b0a5fdcbe33835755c4c/2000000000035410097",
+        images_url: [
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA1NTYxMCwicHVyIjoiYmxvYl9pZCJ9fQ==--98243112602f421887293d3cde13a09377d19a34/2000000000035409798",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA1NTgyMywicHVyIjoiYmxvYl9pZCJ9fQ==--5cb6b915ce0b2e64185b4fbf3711dd63c05c3298/2000000000035409811",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA1NTcyNSwicHVyIjoiYmxvYl9pZCJ9fQ==--f8c9422db499285c1f397da33a7f5377b3783032/2000000000035410070",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA1NTc5NywicHVyIjoiYmxvYl9pZCJ9fQ==--d1608540a74ece39e461db70cc0538332a32e053/2000000000035410073",
+        ],
+    },
+    {   id: 9,
+        title: "Cyberpunk 2077",
+        price: 60,
+        platform_id: 0,
+        platform_desc: "Steam",
+        game_desc: `Il gioco:
+
+Tu sei Henry, il figlio di un fabbro. Colpito da una violenta guerra civile, assisti impotente all’invasione del tuo villaggio e al massacro dei tuoi amici e della tua famiglia. Sfuggito a malapena a questo attacco brutale, raccogli la tua spada per combattere: vendica la morte dei tuoi genitori e aiuta a respingere gli invasori!
+La storia:
+
+La Boemia è una regione nel cuore dell’Europa, ricca di cultura, argento e castelli. Con la morte dell’amato sovrano, l’imperatore Carlo IV, il regno è piombato in un periodo di oscurità: guerra, corruzione e tensioni stanno facendo a pezzi questo gioiello del Sacro Romano Impero.
+Nel mentre, la corona è stata ereditata da Venceslao, uno dei figli di Carlo. A differenza di suo padre, Venceslao è ingenuo, sprovveduto e senza alcuna ambizione. Il suo fratellastro e re dell’Ungheria, Sigismondo la Volpe Rossa, ha capito le debolezze di Venceslao e, fingendo buone intenzioni, si è recato in Boemia per rapire il suo fratellastro. Con la corona vacante, Sigismondo è ora libero di saccheggiare la Boemia e impadronirsi delle sue ricchezze.
+
+Nel bel mezzo di questo caos ci sei tu, Henry, il figlio di un fabbro. La tua vita tranquilla è stata distrutta da un’incursione di mercenari ordinata da re Sigismondo in persona: del tuo villaggio rimane solo la cenere, ma il fato beffardo ha fatto di te l’unico superstite di questo massacro.
+
+Senza una casa, una famiglia o un futuro, finisci al servizio di Radzig Kobyla, un signore feudale che si sta opponendo all’invasione. Finisci così all’interno di una sanguinosa guerra civile, dove lotterai per il futuro della Boemia.`,
+        category_id: 2,
+        category_desc: "gdr",
+        cover_image_url: "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAzNjE3OSwicHVyIjoiYmxvYl9pZCJ9fQ==--255f14de005ba367beed526e0cbf6aafb811a13a/2000000000039665863",
+        images_url: [
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6ODY5MzU2MywicHVyIjoiYmxvYl9pZCJ9fQ==--300b8537b52e1a181be1ff5b0934f35a0ce85b4e/3007470024422287707",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTk3NjQ0LCJwdXIiOiJibG9iX2lkIn19--a2b57bb4fcf1c032950f348d9d7da0133d3bd00a/capture3",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA2MDEyOSwicHVyIjoiYmxvYl9pZCJ9fQ==--aafa788b517df2268c99324e30fda838096fe2b9/2000000000037825656",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA2MTQxNiwicHVyIjoiYmxvYl9pZCJ9fQ==--00e74d5813ef95ec95b4f43be417cd12abf42e17/2000000000037825585",
+        ],
+    },
+    {   id: 10,
         title: "Kingdom Come: Deliverance",
         price: 60,
         platform_id: 0,

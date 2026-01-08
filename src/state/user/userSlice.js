@@ -55,6 +55,7 @@ const userSlice = createSlice({
             state.email = action.payload.email;
             state.address = action.payload.address;
             state.accessToken = action.payload.accessToken;
+            state.discount = action.payload.discount;
         },
         logout: (state, action) => {
            

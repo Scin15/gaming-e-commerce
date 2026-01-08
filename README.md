@@ -1,16 +1,22 @@
-# React + Vite
+Frontend di un e-commerce di titoli videoludici, con design minimal e moderno.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tecnologie usate:
 
-Currently, two official plugins are available:
+1 Framework React (rendering client side);
+2 Libreria Redux per la gestione dello stato globale: carrello, utente, storico ordini;
+3 Tailiwindcss (responsive design);
+4 Figma per prototipazione e design;
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In progress:
 
-## React Compiler
+1 DB PostgreSql per gestione utenze, catalogo, storico ordini;
+2 API per gestione registrazione e login con JWT;
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Il sito per semplicità, importa un finto DB come oggetto JavaScript. Sotto la cartella src/DataBase sono presenti gli oggetti che rappresentano:
 
-## Expanding the ESLint configuration
+- Catalogo giochi;
+- Lista categorie;
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Non avendo ancora implementato API per registrazione e getione dei login, per il login è possibile usare l'utenza temporanea "pinco@pallo", password: "pippo" 
+
+Immagini prese dal sito https://splash.games.directory/;

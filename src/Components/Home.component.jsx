@@ -1,6 +1,6 @@
-import ps5 from "../assets/Homepage/playstation5.png";
-import xbox_series from "../assets/Homepage/xbox_series.png";
-import switch2 from "../assets/Homepage/switch2.png";
+// import ps5 from "../assets/Homepage/playstation5.png";
+// import xbox_series from "../assets/Homepage/xbox_series.png";
+// import switch2 from "../assets/Homepage/switch2.png";
 import GameCard from "./GameCard.component";
 import { useEffect, useState, useRef } from "react";
 import NavButtons from "./NavButtons.component";
@@ -95,17 +95,17 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`${startAnimation ? "2xl:flex hidden translate-y-0 duration-800 opacity-100" : "xl:flex hidden translate-y-100 opacity-0"}`}>
+                            {/* <div className={`${startAnimation ? "2xl:flex hidden translate-y-0 duration-800 opacity-100" : "xl:flex hidden translate-y-100 opacity-0"}`}>
                                 <img src={ps5} alt="" className="xl:w-[272px] xl:h-[330px] w-[122] h-[180px] top-[433px] right-[822px]"/>
                                 <img src={xbox_series} alt="" className="xl:w-[272px] xl:h-[330px] w-[122] h-[180px]"/>
                                 <img src={switch2} alt="" className="xl:w-[272px] xl:h-[330px] w-[122] h-[180px]"/>
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>
                 </div>  
                 <div className={`flex-col text-center pt-[46px] mx-auto border-t-1 border-black/25 ${startAnimation ? "duration-800" : "translate-y-50 opacity-0"}`}>
-                    <div className="title" ref={targetRef}>
+                    <div className="title scroll-mt-[112px]" ref={targetRef}>
                         <h4 className="text-primary">I migliori del mese</h4>
                         <h5>I migliori 20 titoli del mese in base a vendite, critica e apprezzamento del pubblico</h5>
                     </div>

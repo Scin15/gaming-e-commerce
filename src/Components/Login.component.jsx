@@ -53,14 +53,15 @@ const Login = () => {
 
             // inserisco codice fittizio come se avessi effettuato il login per testare il corretto funzionamento dello stato con Redux
 
-            if (email == "marco.scinetti@gmail.com" & password == "pippo") {
+            if (email == "pinco@pallo.com" & password == "pippo") {
                     result = {
                     accessToken: "ade4565456",
-                    name: "Marco",
-                    surname: "Scinetti",
-                    email: "marco.scinetti@gmail.com",
+                    name: "Pinco",
+                    surname: "Pallo",
+                    email: "pinco@pallo.com",
                     id: 0,
-                    address: "Via Valeriana 69, 23015, Dubino",
+                    address: "Via Brombeis, 80122 Napoli(NA)",
+                    discount: 0.2,
                 }
             } else {
                 throw(new Error("Utenza non registrata"));
