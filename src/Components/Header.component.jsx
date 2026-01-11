@@ -46,7 +46,7 @@ const Header = () => {
                             <SearchIcon width="32" height="32" />
                         </button>
                         { searchMobile &&
-                            <div className="absolute left-0 w-full h-full bg-white dark:bg-black flex justify-between px-[16px] items-center">
+                            <div className="absolute left-0 w-full h-full bg-white dark:bg-black flex justify-between px-[16px] items-center z-150">
                                 <div>
                                     <SearchBar />
                                 </div>
@@ -57,7 +57,7 @@ const Header = () => {
                         <div className="mr-[16px] mt-[4px]">
                             <ThemeToggler />
                         </div>
-                        <NavLink className="relative" to="cart">
+                        <NavLink className="relative z-100" to="cart">
 
                             <CartIcon />
                             {count > 0 && (
