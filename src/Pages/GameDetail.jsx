@@ -4,7 +4,7 @@ import resident_evil from "../assets/Giochi/Resident Evil Requiem/resident_evil.
 import { increment } from "../state/counter/counterSlice";
 import { add } from "../state/cart/cartSlice";
 import { useDispatch } from "react-redux";
-import PlatformIcon from "./PlatformIcon";
+import PlatformIcon from "../Components/PlatformIcon";
 
 const GameDetail = ( { id } ) => {
 
@@ -20,7 +20,7 @@ const GameDetail = ( { id } ) => {
 
     return (
         <>
-            <div className="my-[168px] 2xl:mx-[512px] :mx-[128px] mx-[64px] min-h-screen relative">
+            <div className="py-[168px] 2xl:mx-[512px] md:mx-[128px] mx-[64px] min-h-screen relative">
                 <div className="flex justify-center mb-[32px]">
                     <div className="absolute left-[8px] top-[-10px]">
                         {<PlatformIcon width={64} height={64} id={game.platform_id}/>}
@@ -33,7 +33,7 @@ const GameDetail = ( { id } ) => {
 
                 <div className="gap-[32px] grid grid-cols-2">
                     <div className="flex-col gap-[24px]">
-                        <img src={game.cover_image_url} alt="" className="hover:opacity-75 focus:absolute focus:opacity-100 focus:top-1 focus:left-0 hover:cursor-pointer" tabIndex={0} />
+                        <img src={game.cover_image_url} alt="" className="hover:opacity-75 focus:absolute focus:opacity-100 focus:top-[168px] focus:left-0 hover:cursor-pointer" tabIndex={0} />
                         <div className="flex flex-col gap-[32px] items-center mt-[24px]">
                             <h5>{`${game.price} €`}</h5>
                             <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 w-[230px]" onClick={handleClick}>Aggiungi al carrello</button>
@@ -44,7 +44,7 @@ const GameDetail = ( { id } ) => {
                             {
                             game.images_url.map((element) => {
                                 return (
-                                  <img src={element} alt="" className="hover:opacity-75 focus:absolute focus:top-1 focus:left-0 focus:opacity-100 t-0 hover:cursor-pointer" tabIndex={0}  />  
+                                  <img src={element} alt="" className="hover:opacity-75 focus:absolute focus:top-[168px] focus:left-0 focus:opacity-100 t-0 hover:cursor-pointer" tabIndex={0}  />  
                                 )
                             })
                             }

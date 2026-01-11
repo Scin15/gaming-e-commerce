@@ -1,16 +1,10 @@
-import { remove } from "../state/cart/cartSlice";
-import { decrement } from "../state/counter/counterSlice";
 import { useDispatch } from "react-redux";
-import DecrementIcon from "./Icons/DecrementIcon.component.";
+import DecrementIcon from "../Icons/DecrementIcon.component.";
+import { removeItem } from "../../Utils/cartManagement";
 
     const CartList = ( {list, className } ) => {
 
         const dispatch = useDispatch();
-
-        const handleClick = (id) => {
-            dispatch(remove(id));
-            dispatch(decrement());
-        }
 
         if (!list || list.length == 0) {
             return (
@@ -38,7 +32,7 @@ import DecrementIcon from "./Icons/DecrementIcon.component.";
                                     <p className="font-bold">{element.quantity ? `x ${element.quantity}`: ""}</p>
                                 </div>
                                 <div>
-                                    <button className="border-[1px] border-black/25 text-black text-h6 rounded-full bg-white hover:bg-black/10 active:opacity-50" onClick={() => handleClick(element.id)}>
+                                    <button className="text-black text-h6 rounded-full bg-black/5 hover:bg-white active:opacity-50" onClick={() => removeItem(element.id, dispatch)}>
                                         <DecrementIcon />
                                     </button>
                                 </div>

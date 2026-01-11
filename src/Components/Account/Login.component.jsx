@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router';
 import { useDispatch } from "react-redux";
-import { login } from "../state/user/userSlice";
+import { login } from "../../state/user/userSlice";
 import Register from "./Register.component";
 
 const Login = () => {
@@ -114,7 +114,7 @@ const Login = () => {
 
     return (
         <>
-            <div className="relative">
+            <div className="relative text-p">
 
                 {registration && 
                 <div className="absolute left-1/2 -translate-x-1/2 bg-white min-h-100 min-w-200 shadow-xl z-100">
@@ -139,14 +139,14 @@ const Login = () => {
                     <form className="flex flex-col gap-[16px]" action="">
                         <div className="grid grid-cols-2 mx-auto">
                             <label htmlFor="email">E-mail</label>
-                            <input className="bg-black/10 text-p rounded-full px-[16px] py-[8px]" type="text" id="email" name="email" onChange={handleChange} />
+                            <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="text" id="email" name="email" onChange={handleChange} />
                         </div>
                         <div className="grid grid-cols-2 mx-auto">
                             <label htmlFor="password">Password</label>
-                            <input className="bg-black/10 text-p rounded-full px-[16px] py-[8px]" type="password" id="password" name="password" onChange={handleChange} />
+                            <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="password" id="password" name="password" onChange={handleChange} />
                         </div>
                         <div className="flex gap-[16px] mt-[32px]">
-                            <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-black hover:shadow-xl active:opacity-75 w-[230px] border-[2px] font-bold" onClick={handleLogin}>Login
+                            <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-p hover:shadow-xl active:opacity-75 w-[230px] border-[2px] font-bold" onClick={handleLogin}>Login
                             </button>
                             <div className="relative">
                                 <p className="text-alert absolute top-[-32px]">Non sei ancora registrato?</p>

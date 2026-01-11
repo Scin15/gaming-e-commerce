@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
-import CartList from "./CartList.componend";
-import CartListTotal from "./CartListTotal";
+import CartList from "../Components/Cart/CartList.component";
+import CartListTotal from "../Components/Cart/CartListTotal.component";
 import { useSelector } from "react-redux";
 import { remove } from "../state/cart/cartSlice";
 import { useDispatch } from "react-redux";
@@ -26,7 +26,7 @@ const Cart = () => {
 
     return (
         <>
-            <div className="my-[168px] max-w-[512px] m-auto flex flex-col gap-[32px]">
+            <div className="py-[168px] max-w-[512px] m-auto flex flex-col gap-[32px]">
                 <CartList list={products}></CartList>
 
                 <CartListTotal total={total} discount={discount ? discount : 0}></CartListTotal>

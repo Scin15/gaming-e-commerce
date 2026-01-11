@@ -68,7 +68,7 @@ Il gioco base segue tre storie di base, tra cui il giocatore può scegliere quel
             "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTIxNjY2OTMsInB1ciI6ImJsb2JfaWQifX0=--cd8719a7c0a02e1f38fb8d1b2210ca7320b87f0b/2000000000051821299",
             "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA0MTk0NSwicHVyIjoiYmxvYl9pZCJ9fQ==--bbaf652231e554b51c0b630844dd06f5d10ba636/2000000000075940414",
             "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA0MTczMiwicHVyIjoiYmxvYl9pZCJ9fQ==--04c8c6367f22792ebf6976693557c73fdbb2256f/2000000000075940383",
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAzODc0NCwicHVyIjoiYmxvYl9pZCJ9fQ==--762ccea933f01cacde028cc4f9ffcf3b0a4c69a6/2000000000060090745",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA0MTM3OSwicHVyIjoiYmxvYl9pZCJ9fQ==--be1c9feb9808566fac4e8595de97afdec4e9bcfd/2000000000075939083",
         ],
     },
     {   id: 4,
@@ -152,17 +152,7 @@ Senza una casa, una famiglia o un futuro, finisci al servizio di Radzig Kobyla, 
         price: 60,
         platform_id: 0,
         platform_desc: "Steam",
-        game_desc: `Il gioco:
-
-Tu sei Henry, il figlio di un fabbro. Colpito da una violenta guerra civile, assisti impotente all’invasione del tuo villaggio e al massacro dei tuoi amici e della tua famiglia. Sfuggito a malapena a questo attacco brutale, raccogli la tua spada per combattere: vendica la morte dei tuoi genitori e aiuta a respingere gli invasori!
-La storia:
-
-La Boemia è una regione nel cuore dell’Europa, ricca di cultura, argento e castelli. Con la morte dell’amato sovrano, l’imperatore Carlo IV, il regno è piombato in un periodo di oscurità: guerra, corruzione e tensioni stanno facendo a pezzi questo gioiello del Sacro Romano Impero.
-Nel mentre, la corona è stata ereditata da Venceslao, uno dei figli di Carlo. A differenza di suo padre, Venceslao è ingenuo, sprovveduto e senza alcuna ambizione. Il suo fratellastro e re dell’Ungheria, Sigismondo la Volpe Rossa, ha capito le debolezze di Venceslao e, fingendo buone intenzioni, si è recato in Boemia per rapire il suo fratellastro. Con la corona vacante, Sigismondo è ora libero di saccheggiare la Boemia e impadronirsi delle sue ricchezze.
-
-Nel bel mezzo di questo caos ci sei tu, Henry, il figlio di un fabbro. La tua vita tranquilla è stata distrutta da un’incursione di mercenari ordinata da re Sigismondo in persona: del tuo villaggio rimane solo la cenere, ma il fato beffardo ha fatto di te l’unico superstite di questo massacro.
-
-Senza una casa, una famiglia o un futuro, finisci al servizio di Radzig Kobyla, un signore feudale che si sta opponendo all’invasione. Finisci così all’interno di una sanguinosa guerra civile, dove lotterai per il futuro della Boemia.`,
+        game_desc: `The Witcher: Wild Hunt è un gioco di ruolo di nuova generazione incentrato sulla trama e ambientato in un universo aperto, caratterizzato da un'ambientazione fantasy mozzafiato in cui ogni scelta comporta delle conseguenze. In The Witcher si indossano i panni di un esperto cacciatore di taglie, Geralt di Rivia, incaricato di trovare una ragazza oggetto di una profezia in un universo fantasy aperto ricco di città mercantili, isole abitate da pirati vichinghi, pericolosi valichi di montagna e caverne da esplorare.`,
         category_id: 2,
         category_desc: "gdr",
         cover_image_url: "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTIxNDI3NzYsInB1ciI6ImJsb2JfaWQifX0=--2206c7ba52330ee47205b0a5fdcbe33835755c4c/2000000000035410097",
@@ -178,51 +168,36 @@ Senza una casa, una famiglia o un futuro, finisci al servizio di Radzig Kobyla, 
         price: 60,
         platform_id: 0,
         platform_desc: "Steam",
-        game_desc: `Il gioco:
-
-Tu sei Henry, il figlio di un fabbro. Colpito da una violenta guerra civile, assisti impotente all’invasione del tuo villaggio e al massacro dei tuoi amici e della tua famiglia. Sfuggito a malapena a questo attacco brutale, raccogli la tua spada per combattere: vendica la morte dei tuoi genitori e aiuta a respingere gli invasori!
-La storia:
-
-La Boemia è una regione nel cuore dell’Europa, ricca di cultura, argento e castelli. Con la morte dell’amato sovrano, l’imperatore Carlo IV, il regno è piombato in un periodo di oscurità: guerra, corruzione e tensioni stanno facendo a pezzi questo gioiello del Sacro Romano Impero.
-Nel mentre, la corona è stata ereditata da Venceslao, uno dei figli di Carlo. A differenza di suo padre, Venceslao è ingenuo, sprovveduto e senza alcuna ambizione. Il suo fratellastro e re dell’Ungheria, Sigismondo la Volpe Rossa, ha capito le debolezze di Venceslao e, fingendo buone intenzioni, si è recato in Boemia per rapire il suo fratellastro. Con la corona vacante, Sigismondo è ora libero di saccheggiare la Boemia e impadronirsi delle sue ricchezze.
-
-Nel bel mezzo di questo caos ci sei tu, Henry, il figlio di un fabbro. La tua vita tranquilla è stata distrutta da un’incursione di mercenari ordinata da re Sigismondo in persona: del tuo villaggio rimane solo la cenere, ma il fato beffardo ha fatto di te l’unico superstite di questo massacro.
-
-Senza una casa, una famiglia o un futuro, finisci al servizio di Radzig Kobyla, un signore feudale che si sta opponendo all’invasione. Finisci così all’interno di una sanguinosa guerra civile, dove lotterai per il futuro della Boemia.`,
+        game_desc: `Cyberpunk 2077 per PC è un gioco sparatutto in prima persona, ma con una differenza. É ambientato in uno stato distopico della California, in cui le regole della nazione e dello stato non si applicano più. Invece, giocando come un mercenario di nome V, il giocatore deve muoversi per la città, raggiungere i propri obiettivi e nel frattempo combattere i nemici.`,
         category_id: 2,
         category_desc: "gdr",
         cover_image_url: "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAzNjE3OSwicHVyIjoiYmxvYl9pZCJ9fQ==--255f14de005ba367beed526e0cbf6aafb811a13a/2000000000039665863",
         images_url: [
             "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6ODY5MzU2MywicHVyIjoiYmxvYl9pZCJ9fQ==--300b8537b52e1a181be1ff5b0934f35a0ce85b4e/3007470024422287707",
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTk3NjQ0LCJwdXIiOiJibG9iX2lkIn19--a2b57bb4fcf1c032950f348d9d7da0133d3bd00a/capture3",
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA2MDEyOSwicHVyIjoiYmxvYl9pZCJ9fQ==--aafa788b517df2268c99324e30fda838096fe2b9/2000000000037825656",
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA2MTQxNiwicHVyIjoiYmxvYl9pZCJ9fQ==--00e74d5813ef95ec95b4f43be417cd12abf42e17/2000000000037825585",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTY4NzkzOCwicHVyIjoiYmxvYl9pZCJ9fQ==--e0d3d933810e2788914303f3670b1f1d63f139cf/2000000000040401546",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTY4NzkyOSwicHVyIjoiYmxvYl9pZCJ9fQ==--05697656e01d3ece3f702b53561a46170620e8e7/2000000000040401591",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTY4Nzg5OCwicHVyIjoiYmxvYl9pZCJ9fQ==--74188cd810da694537d5597f2e10c510409bbeec/2000000000040401287",
         ],
     },
     {   id: 10,
-        title: "Kingdom Come: Deliverance",
+        title: "Death Stranding",
         price: 60,
-        platform_id: 0,
-        platform_desc: "Steam",
-        game_desc: `Il gioco:
+        platform_id: 2,
+        platform_desc: "SerieX",
+        game_desc: `Dal leggendario Hideo Kojima arriva un’esperienza che definisce il genere, ora ampliata nell’edizione definitiva DIRECTOR’S CUT.
 
-Tu sei Henry, il figlio di un fabbro. Colpito da una violenta guerra civile, assisti impotente all’invasione del tuo villaggio e al massacro dei tuoi amici e della tua famiglia. Sfuggito a malapena a questo attacco brutale, raccogli la tua spada per combattere: vendica la morte dei tuoi genitori e aiuta a respingere gli invasori!
-La storia:
+Nel futuro un evento misterioso noto come Death Stranding ha aperto una strada tra i vivi e i morti, generando creature dell’aldilà che vagano in un mondo decaduto e desolato.
 
-La Boemia è una regione nel cuore dell’Europa, ricca di cultura, argento e castelli. Con la morte dell’amato sovrano, l’imperatore Carlo IV, il regno è piombato in un periodo di oscurità: guerra, corruzione e tensioni stanno facendo a pezzi questo gioiello del Sacro Romano Impero.
-Nel mentre, la corona è stata ereditata da Venceslao, uno dei figli di Carlo. A differenza di suo padre, Venceslao è ingenuo, sprovveduto e senza alcuna ambizione. Il suo fratellastro e re dell’Ungheria, Sigismondo la Volpe Rossa, ha capito le debolezze di Venceslao e, fingendo buone intenzioni, si è recato in Boemia per rapire il suo fratellastro. Con la corona vacante, Sigismondo è ora libero di saccheggiare la Boemia e impadronirsi delle sue ricchezze.
-
-Nel bel mezzo di questo caos ci sei tu, Henry, il figlio di un fabbro. La tua vita tranquilla è stata distrutta da un’incursione di mercenari ordinata da re Sigismondo in persona: del tuo villaggio rimane solo la cenere, ma il fato beffardo ha fatto di te l’unico superstite di questo massacro.
-
-Senza una casa, una famiglia o un futuro, finisci al servizio di Radzig Kobyla, un signore feudale che si sta opponendo all’invasione. Finisci così all’interno di una sanguinosa guerra civile, dove lotterai per il futuro della Boemia.`,
+Nei panni di Sam Bridges, dovrai dare speranza all’umanità mettendo in contatto gli ultimi sopravvissuti di un’America decimata.
+Riuscirai a ricomporre un mondo in frantumi?`,
         category_id: 2,
         category_desc: "gdr",
-        cover_image_url: "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA1NzEwMSwicHVyIjoiYmxvYl9pZCJ9fQ==--c53b9ab9b14ac10208771330dc4af2c30cb8dc8a/2000000000037830126",
+        cover_image_url: "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTMzODU1OTQsInB1ciI6ImJsb2JfaWQifX0=--f81fae3a0c8616db037a8756f59c817656b67aa3/3007759126336783653",
         images_url: [
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTk3NjM4LCJwdXIiOiJibG9iX2lkIn19--65502e93aed50fdc453eb0da960ec35a697d20e8/capture0",
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTk3NjQ0LCJwdXIiOiJibG9iX2lkIn19--a2b57bb4fcf1c032950f348d9d7da0133d3bd00a/capture3",
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA2MDEyOSwicHVyIjoiYmxvYl9pZCJ9fQ==--aafa788b517df2268c99324e30fda838096fe2b9/2000000000037825656",
-            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTA2MTQxNiwicHVyIjoiYmxvYl9pZCJ9fQ==--00e74d5813ef95ec95b4f43be417cd12abf42e17/2000000000037825585",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTMzODU2MTcsInB1ciI6ImJsb2JfaWQifX0=--c1c66f91487b90bb1a1574c5ce2be93b100e9267/3042012657998374561",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTMzNzMzMTUsInB1ciI6ImJsb2JfaWQifX0=--ca547335770361d5c2b9681d29d3cae060b3de21/3036878733968443445",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTMzODU2MTAsInB1ciI6ImJsb2JfaWQifX0=--f24827c6a477f71f0e59c78852cd5edddcf6b060/3030186575442183701",
+            "https://splash.games.directory/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTMzODU2MjUsInB1ciI6ImJsb2JfaWQifX0=--8fdb2ebf2b9473cfa2cf853627701a67a13a8dc0/3069620319313712926",
         ],
     },
     

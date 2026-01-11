@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
-import AccountPanel from "./AccountPanel.component";
-import Login from "./Login.component";
+import AccountPanel from "../Components/Account/AccountPanel.component";
+import Login from "../Components/Account/Login.component";
 
 const Account = () => {
 
@@ -10,7 +10,7 @@ const Account = () => {
 
     return (
         <>
-            <div className="mt-[168px]">
+            <div className="pt-[168px]">
                 {user.id == null || !user ? <Login /> : <AccountPanel />}
             </div>
         </>

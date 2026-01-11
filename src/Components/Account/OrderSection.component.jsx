@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import resident_evil from "../assets/Giochi/Resident Evil Requiem/resident_evil.png";
 import { NavLink } from "react-router";
 
 const OrderSection = () => {
@@ -22,7 +21,7 @@ const OrderSection = () => {
                         <div className="flex gap-[16px]">
                             <div className="max-w-[256px] overflow-hidden rounded-[18px] ">
                                 <NavLink>
-                                    <img className="w-full h-full hover:scale-110 transition-transform duration-300" src={resident_evil} alt="" />
+                                    <img className="w-full h-full hover:scale-110 transition-transform duration-300" src="" alt="" />
                                 </NavLink>
                             </div>
                             <div className="flex flex-col items-start">
