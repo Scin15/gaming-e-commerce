@@ -57,7 +57,7 @@ const Header = () => {
                         <div className="mr-[16px] mt-[4px]">
                             <ThemeToggler />
                         </div>
-                        <NavLink className="" to="cart">
+                        <NavLink className="relative" to="cart">
 
                             <CartIcon />
                             {count > 0 && (
