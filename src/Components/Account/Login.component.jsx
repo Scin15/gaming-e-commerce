@@ -114,13 +114,13 @@ const Login = () => {
 
     return (
         <>
-            <div className="relative text-p">
+            <div className="flex flex-col items-center text-p">
 
-                {registration && 
+                {/* registration && 
                 <div className="absolute left-1/2 -translate-x-1/2 bg-white min-h-100 min-w-200 shadow-xl z-100">
                     <Register />
                     <button onClick={handleRegistration}>Torna al login</button>
-                </div>
+                </div> */
                 }
 
                 <h4 className="text-center">Login</h4>
@@ -135,22 +135,22 @@ const Login = () => {
                         {passErr && "Inserisci una password valida"}
                     </p>
                 </div>
-                <div className="flex justify-center mt-[80px]">
-                    <form className="flex flex-col gap-[16px]" action="">
-                        <div className="grid grid-cols-2 mx-auto">
-                            <label htmlFor="email">E-mail</label>
+                <div className="flex justify-center mt-[80px] border-1">
+                    <form className="flex flex-col  gap-[16px]" action="">
+                        <div className="flex justify-between mx-[16px] border-1">
+                            <label className="border-1" htmlFor="email">E-mail</label>
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="text" id="email" name="email" onChange={handleChange} />
                         </div>
-                        <div className="grid grid-cols-2 mx-auto">
-                            <label htmlFor="password">Password</label>
+                        <div className="flex justify-between mx-[16px]">
+                            <label className="border-1" htmlFor="password">Password</label>
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="password" id="password" name="password" onChange={handleChange} />
                         </div>
-                        <div className="flex gap-[16px] mt-[32px]">
-                            <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-p hover:shadow-xl active:opacity-75 w-[230px] border-[2px] font-bold" onClick={handleLogin}>Login
+                        <div className="flex justify-center gap-[16px] mt-[32px]">
+                            <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-p hover:shadow-xl active:opacity-75 md:w-[200px] w-[100px] border-[2px] font-bold" onClick={handleLogin}>Login
                             </button>
                             <div className="relative">
-                                <p className="text-alert absolute top-[-32px]">Non sei ancora registrato?</p>
-                                <button className="mr-[40px] shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 w-[230px]" onClick={handleRegistration}>Registrati
+                                <p className="text-alert absolute md:top-[-32px] top-[-40px] md:text-p text-small">Non sei ancora registrato?</p>
+                                <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 md:w-[200px] w-[100px]" onClick={handleRegistration}>Registrati
                                 </button>
                             </div>
                         </div>

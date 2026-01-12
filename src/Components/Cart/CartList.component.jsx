@@ -16,7 +16,7 @@ import { removeItem } from "../../Utils/cartManagement";
         }
 
         return (
-            <div className={`shadow-md border-1 flex flex-col gap-[24px] p-[24px] rounded-[18px] bg-black/10 border-[2px] border-black ${className}`}>
+            <div className={`shadow-md border-1 flex flex-col gap-[24px] p-[24px] rounded-[18px] bg-black/10 border-[2px] border-black ${className} md:text-p text-small`}>
                 <h5>Prodotti</h5>
                 <div className="grid grid-cols-4 gap-[24px]">
                     {list.map(element => {

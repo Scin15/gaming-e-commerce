@@ -26,7 +26,7 @@ const Cart = () => {
 
     return (
         <>
-            <div className="py-[168px] max-w-[512px] m-auto flex flex-col gap-[32px]">
+            <div className="py-[168px] max-w-[512px] md:m-auto mx-[64px]  flex flex-col gap-[32px]">
                 <CartList list={products}></CartList>
 
                 <CartListTotal total={total} discount={discount ? discount : 0}></CartListTotal>

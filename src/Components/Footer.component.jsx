@@ -7,7 +7,7 @@ const Footer = () => {
 
     return (
         <>
-            <div className="inset-shadow-sm h-[96px] text-p text-black w-full z-50 bg-white dark:bg-black dark:text-white">
+            <div className="inset-shadow-sm h-[96px] text-p text-black w-screen z-50 bg-white dark:bg-black dark:text-white">
                 <div className="header-content flex justify-between items-center mx-[40px] h-full">
                     <div className="flex gap-[49px]">
                         <a className="text-small hover:opacity-50" href="">Privacy</a>

@@ -19,7 +19,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="home text-black flex-col pt-[168px] 2xl:px-[128px] px-[64px]  z-0">
+            <div className="home text-black flex-col pt-[168px] 2xl:px-[128px] px-[64px] z-0">
                 <div className="hero xl:h-screen pb-[40px]">
                     <div className={`${startAnimation ? "duration-800" : "-translate-x-50 opacity-0"}`}>
                         <h3 className="text-gradient">Lo store di videogame definitivo</h3>

@@ -18,12 +18,12 @@
 
 @layer base {
     h1 {
-        @apply text-[64px] 2xl:text-[128px] leading-[96px] 2xl:leading-[192px] font-bold dark:text-white;
+        @apply text-[32px] leading-[48px] md:text-[64px] md:leading-[96px] 2xl:text-[128px] 2xl:leading-[192px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
         
   }
     h2 {
-        @apply 2xl:text-[90px] 2xl:leading-[135px] text-[45px] leading-[68px] font-bold dark:text-white;
+        @apply text-[45px] leading-[68px] 2xl:text-[90px] 2xl:leading-[135px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     h3 {
@@ -62,7 +62,7 @@
   }
 
     .text-h1 {
-        @apply text-[64px] 2xl:text-[128px] leading-[96px2] 2xl:leading-[192px] font-bold dark:text-white;
+        @apply text-[32px] leading-[48px] md:text-[64px] md:leading-[96px] 2xl:text-[128px] 2xl:leading-[192px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-h2 {
@@ -91,3 +91,10 @@
         -webkit-text-fill-color: transparent;
   }
 }
+
+@layer theme {
+  * {
+    @apply transition-colors duration-100 ease-out;
+  }
+}
+  

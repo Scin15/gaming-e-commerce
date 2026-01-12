@@ -30,7 +30,7 @@ const SearchBar = () => {
 
     return (
         <>
-            <div className="focus-within:outline-1 focus-within:outline-[#2C2725]/25 flex justify-between rounded-[18px] py-[8px] px-[16px] bg-[#2C2725]/5 xl:w-[569px] sm:w-[450px] w-[200px]  dark:text-white/75 dark:bg-white/25">
+            <div className="focus-within:outline-1 focus-within:outline-[#2C2725]/25 flex justify-between rounded-[18px] py-[8px] px-[16px] bg-[#2C2725]/5 xl:w-[569px] md:w-full dark:text-white/75 dark:bg-white/25">
                 <input type="text" name="search" onChange={onChange} value={searchString} className="focus:outline-none w-full border-0 rounded-[18px] px-[8px]" placeholder="" />
                 {
                     searchString.length > 0 && <button className="group border-r-[1px] border-black/50 dark:border-white opacity-50" onClick={()=>handleCleanSearch(location)}>
