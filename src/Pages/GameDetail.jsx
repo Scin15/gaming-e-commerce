@@ -44,7 +44,7 @@ const GameDetail = ( { id } ) => {
                             {
                             game.images_url.map((element) => {
                                 return (
-                                  <img src={element} alt="" className="hover:opacity-75 focus:absolute focus:top-[168px] focus:left-0 focus:opacity-100 t-0 hover:cursor-pointer" tabIndex={0}  />  
+                                  <img key={0} src={element} alt="" className="hover:opacity-75 focus:absolute focus:top-[168px] focus:left-0 focus:opacity-100 t-0 hover:cursor-pointer" tabIndex={0}  />  
                                 )
                             })
                             }

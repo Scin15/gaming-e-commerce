@@ -4,6 +4,7 @@ import FilterBar from "../Components/FilterBar.component";
 import categories from "../DataBase/Categories";
 import GameList from "../Components/GameList.component";
 import { useSearchParams } from "react-router";
+import { getSubstrings } from "../Utils/utils";
 
 const Catalog = () => {
 
@@ -21,9 +22,27 @@ const Catalog = () => {
         if( filter != 0) {
             filtered = filtered.filter((element) => element.category_id == filter);
             }
-        if(searchParams.get("search")) {
-            filtered = filtered.filter((element => element.title.includes(searchParams.get("search"))));
+
+        // per la funzione cerca uso una Regex.
+        /* non case sensitive, anche più parole, se ci sono almeno 4 caratteri di fila che matchano l'imput, parolaInput|,  */
+        const searchString = searchParams.get("search");
+
+        if(searchString) {
+
+            const expression = new RegExp(searchString, "i");
+            const chunks = getSubstrings(searchString, 4);
+
+            filtered = filtered.filter((element => {
+                return (expression.test(element.title)) || 
+                (
+                    chunks.some(chunk => {
+                     const regex = new RegExp(chunk);
+                     return regex.test(element.title);
+                    })
+                ); 
+            }));
         }
+
         setProductsDisplay(filtered);
     }, [filter, searchParams])
 

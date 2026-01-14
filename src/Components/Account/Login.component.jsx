@@ -135,14 +135,14 @@ const Login = () => {
                         {passErr && "Inserisci una password valida"}
                     </p>
                 </div>
-                <div className="flex justify-center mt-[80px] border-1">
-                    <form className="flex flex-col  gap-[16px]" action="">
-                        <div className="flex justify-between mx-[16px] border-1">
-                            <label className="border-1" htmlFor="email">E-mail</label>
+                <div className="flex justify-center mt-[80px] ">
+                    <form className="flex flex-col gap-[16px]" action="">
+                        <div className="flex justify-between items-center mx-[16px] gap[8px]">
+                            <label className="" htmlFor="email">E-mail</label>
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="text" id="email" name="email" onChange={handleChange} />
                         </div>
-                        <div className="flex justify-between mx-[16px]">
-                            <label className="border-1" htmlFor="password">Password</label>
+                        <div className="flex justify-between items-center mx-[16px] gap[8px]">
+                            <label className="" htmlFor="password">Password</label>
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="password" id="password" name="password" onChange={handleChange} />
                         </div>
                         <div className="flex justify-center gap-[16px] mt-[32px]">

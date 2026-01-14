@@ -22,7 +22,7 @@ const GameCard = ({ item, className}) => {
                     <div className="info mt-[16px]">
                         <h6 className="mb-8px">{item.title}</h6>
                         <h6 className="opacity-75">{item.price + " €"}</h6>
-                        <button className="xl:flex shadow-md rounded-full px-[16px] py-[8px] xl:px-[32px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary xl:text-h6 text-p hover:shadow-xl mt-[16px] active:opacity-75" onClick={() => addItem(item, dispatch)}>Aggiungi al carrello</button>
+                        <button className="shadow-md rounded-full px-[16px] py-[8px] xl:px-[32px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary xl:text-h6 text-p hover:shadow-xl mt-[16px] active:opacity-75 w-full" onClick={() => addItem(item, dispatch)}>Aggiungi al carrello</button>
                     </div>
                 </div>
             </div>

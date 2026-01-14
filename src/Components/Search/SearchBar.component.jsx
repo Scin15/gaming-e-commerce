@@ -14,7 +14,8 @@ const SearchBar = () => {
         console.log(searchString);
     }
 
-    const handleSearch = () => {
+    const handleSearch = (e) => {
+        e.preventDefault();
         navigate(`/catalog/?search=${searchString}`);
     }
     
@@ -30,17 +31,17 @@ const SearchBar = () => {
 
     return (
         <>
-            <div className="focus-within:outline-1 focus-within:outline-[#2C2725]/25 flex justify-between rounded-[18px] py-[8px] px-[16px] bg-[#2C2725]/5 xl:w-[569px] md:w-full dark:text-white/75 dark:bg-white/25">
-                <input type="text" name="search" onChange={onChange} value={searchString} className="focus:outline-none w-full border-0 rounded-[18px] px-[8px]" placeholder="" />
-                {
-                    searchString.length > 0 && <button className="group border-r-[1px] border-black/50 dark:border-white opacity-50" onClick={()=>handleCleanSearch(location)}>
-                        <CrossIcon width="32" height="32" />
-                    </button>    
-                }
-                <button className="group" onClick={handleSearch}>
-                    <SearchIcon width="32" height="32" />
-                </button>
-            </div>
+                <form onSubmit={handleSearch} className="focus-within:outline-1 focus-within:outline-[#2C2725]/25 flex justify-between rounded-[18px] py-[8px] px-[16px] bg-[#2C2725]/5 xl:w-[569px] md:w-full dark:text-white/75 dark:bg-white/25">
+                    <input type="text" name="search" onChange={onChange} value={searchString} className="focus:outline-none w-full border-0 rounded-[18px] px-[8px]" placeholder="" />
+                    {
+                        searchString.length > 0 && <button type="button" className="group border-r-[1px] border-black/50 dark:border-white opacity-50" onClick={()=>handleCleanSearch(location)}>
+                            <CrossIcon width="32" height="32" />
+                        </button>    
+                    }
+                    <button type="submit" className="group">
+                        <SearchIcon width="32" height="32" />
+                    </button>
+                </form>
         </>
     )
 }
