@@ -35,37 +35,37 @@ const Login = () => {
             setPassErr(false);
         }
 
-        let result = {};
+        let result = null;
 
         try {
-
-            // const result = await (await fetch(`${import.meta.env.VITE_END_POINT}/login`, {
-            //     method : "POST",
-            //     credentials : 'include',
-            //     headers : {
-            //         "Content-Type" : "application/json"
-            //     },
-            //     body : JSON.stringify({
-            //         mail : email,
-            //         password : password
-            //     })
-            // })).json()
-
+            
+            result = await (await fetch(`${import.meta.env.VITE_END_POINT}/login`, {
+                method : "POST",
+                credentials : 'include',
+                headers : {
+                    "Content-Type" : "application/json"
+                },
+                body : JSON.stringify({
+                    email : email,
+                    password : password
+                })
+            })).json();
+            
             // inserisco codice fittizio come se avessi effettuato il login per testare il corretto funzionamento dello stato con Redux
 
-            if (email == "pinco@pallo.com" & password == "pippo") {
-                    result = {
-                    accessToken: "ade4565456",
-                    name: "Pinco",
-                    surname: "Pallo",
-                    email: "pinco@pallo.com",
-                    id: 0,
-                    address: "Via Brombeis, 80122 Napoli(NA)",
-                    discount: 0.2,
-                }
-            } else {
-                throw(new Error("Utenza non registrata"));
-            }
+            // if (email == "pinco@pallo.com" & password == "pippo") {
+            //         result = {
+            //         accessToken: "ade4565456",
+            //         name: "Pinco",
+            //         surname: "Pallo",
+            //         email: "pinco@pallo.com",
+            //         id: 0,
+            //         address: "Via Brombeis, 80122 Napoli(NA)",
+            //         discount: 0.2,
+            //     }
+            // } else {
+            //     throw(new Error("Utenza non registrata"));
+            // }
 
         } catch (error) {
             setLoginErr({
@@ -74,7 +74,8 @@ const Login = () => {
             });
             return;
         }
-    
+        
+        console.log("Access token ottenuto:", result.accessToken);
             if(result.accessToken){
                 // setUser({
                 //     accessToken : result.accessToken,
@@ -85,9 +86,7 @@ const Login = () => {
                 // })
 
                 dispatch(login(result));
-                console.log("Stato inserito");
-    
-                navigate("/account")
+                navigate("/account");
     
             }else {
                 setLoginErr({
@@ -137,11 +136,11 @@ const Login = () => {
                 </div>
                 <div className="flex justify-center mt-[80px] ">
                     <form className="flex flex-col gap-[16px]" action="">
-                        <div className="flex justify-between items-center mx-[16px] gap[8px]">
+                        <div className="flex justify-between items-center mx-[16px]">
                             <label className="" htmlFor="email">E-mail</label>
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="text" id="email" name="email" onChange={handleChange} />
                         </div>
-                        <div className="flex justify-between items-center mx-[16px] gap[8px]">
+                        <div className="flex justify-between items-center mx-[16px]">
                             <label className="" htmlFor="password">Password</label>
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="password" id="password" name="password" onChange={handleChange} />
                         </div>
