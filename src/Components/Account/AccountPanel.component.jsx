@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import FilterBar from "./FilterBar.component";
+import FilterBar from "../FilterBar.component";
 import UserSection from "./UserSection";
 import OrderSection from "./OrderSection.component";
 

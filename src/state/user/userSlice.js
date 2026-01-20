@@ -8,32 +8,32 @@ const initialState = {
     // address: "Via valeriana 69, 23015",
     // accessToken: "0490dsfadaa",
     // refreshToken: null,
-    orders: [
-        {
-            id: 0,
-            product_id: 0,
-            product_title: "Resident Evil",
-            price: 50,
-            platform_id: 0,
-            platform_desc: "Steam",
-            date: new Date("04/16/2024"),
-            state: "Received",
-            payment_method: "VISA",
-            address: "Via Valeriena 69, Dubino, 23015"
-        },
-        {
-            id: 1,
-            product_id: 2,
-            product_title: "Donkey Kong Bananza",
-            price: 79.99,
-            platform_id: 4,
-            platform_desc: "Switch 2",
-            date: new Date("04/16/2024"), 
-            state: "Received",
-            payment_method: "VISA",
-            address: "Via Valeriena 69, Dubino, 23015"
-        },
-    ]
+    // orders: [
+    //     {
+    //         id: 0,
+    //         product_id: 0,
+    //         product_title: "Resident Evil",
+    //         price: 50,
+    //         platform_id: 0,
+    //         platform_desc: "Steam",
+    //         date: new Date("04/16/2024"),
+    //         state: "Received",
+    //         payment_method: "VISA",
+    //         address: "Via Valeriena 69, Dubino, 23015"
+    //     },
+    //     {
+    //         id: 1,
+    //         product_id: 2,
+    //         product_title: "Donkey Kong Bananza",
+    //         price: 79.99,
+    //         platform_id: 4,
+    //         platform_desc: "Switch 2",
+    //         date: new Date("04/16/2024"), 
+    //         state: "Received",
+    //         payment_method: "VISA",
+    //         address: "Via Valeriena 69, Dubino, 23015"
+    //     },
+    // ]
 };
 
 // Devo loggare l'utente. 
@@ -49,7 +49,7 @@ const userSlice = createSlice({
                 console.log("Autenticazione non riuscita");
                 return;
             }
-            state.id = action.payload.id;
+            state.id = action.payload._id;
             state.name = action.payload.name;
             state.surname = action.payload.surname;
             state.email = action.payload.email;

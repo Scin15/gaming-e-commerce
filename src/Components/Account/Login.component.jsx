@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router';
 import { useDispatch } from "react-redux";
-import { login } from "../state/user/userSlice";
+import { login } from "../../state/user/userSlice";
 import Register from "./Register.component";
 
 const Login = () => {
@@ -35,37 +35,37 @@ const Login = () => {
             setPassErr(false);
         }
 
-        let result = {};
+        let result = null;
 
         try {
-
-            // const result = await (await fetch(`${import.meta.env.VITE_END_POINT}/login`, {
-            //     method : "POST",
-            //     credentials : 'include',
-            //     headers : {
-            //         "Content-Type" : "application/json"
-            //     },
-            //     body : JSON.stringify({
-            //         mail : email,
-            //         password : password
-            //     })
-            // })).json()
-
+            
+            result = await (await fetch(`${import.meta.env.VITE_END_POINT}/login`, {
+                method : "POST",
+                credentials : 'include',
+                headers : {
+                    "Content-Type" : "application/json"
+                },
+                body : JSON.stringify({
+                    email : email,
+                    password : password
+                })
+            })).json();
+            
             // inserisco codice fittizio come se avessi effettuato il login per testare il corretto funzionamento dello stato con Redux
 
-            if (email == "pinco@pallo.com" & password == "pippo") {
-                    result = {
-                    accessToken: "ade4565456",
-                    name: "Pinco",
-                    surname: "Pallo",
-                    email: "pinco@pallo.com",
-                    id: 0,
-                    address: "Via Brombeis, 80122 Napoli(NA)",
-                    discount: 0.2,
-                }
-            } else {
-                throw(new Error("Utenza non registrata"));
-            }
+            // if (email == "pinco@pallo.com" & password == "pippo") {
+            //         result = {
+            //         accessToken: "ade4565456",
+            //         name: "Pinco",
+            //         surname: "Pallo",
+            //         email: "pinco@pallo.com",
+            //         id: 0,
+            //         address: "Via Brombeis, 80122 Napoli(NA)",
+            //         discount: 0.2,
+            //     }
+            // } else {
+            //     throw(new Error("Utenza non registrata"));
+            // }
 
         } catch (error) {
             setLoginErr({
@@ -74,7 +74,8 @@ const Login = () => {
             });
             return;
         }
-    
+        
+        console.log("Access token ottenuto:", result.accessToken);
             if(result.accessToken){
                 // setUser({
                 //     accessToken : result.accessToken,
@@ -85,9 +86,7 @@ const Login = () => {
                 // })
 
                 dispatch(login(result));
-                console.log("Stato inserito");
-    
-                navigate("/account")
+                navigate("/account");
     
             }else {
                 setLoginErr({
@@ -114,13 +113,13 @@ const Login = () => {
 
     return (
         <>
-            <div className="relative">
+            <div className="flex flex-col items-center text-p">
 
-                {registration && 
+                {/* registration && 
                 <div className="absolute left-1/2 -translate-x-1/2 bg-white min-h-100 min-w-200 shadow-xl z-100">
                     <Register />
                     <button onClick={handleRegistration}>Torna al login</button>
-                </div>
+                </div> */
                 }
 
                 <h4 className="text-center">Login</h4>
@@ -135,22 +134,22 @@ const Login = () => {
                         {passErr && "Inserisci una password valida"}
                     </p>
                 </div>
-                <div className="flex justify-center mt-[80px]">
+                <div className="flex justify-center mt-[80px] ">
                     <form className="flex flex-col gap-[16px]" action="">
-                        <div className="grid grid-cols-2 mx-auto">
-                            <label htmlFor="email">E-mail</label>
-                            <input className="bg-black/10 text-p rounded-full px-[16px] py-[8px]" type="text" id="email" name="email" onChange={handleChange} />
+                        <div className="flex justify-between items-center mx-[16px]">
+                            <label className="" htmlFor="email">E-mail</label>
+                            <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="text" id="email" name="email" onChange={handleChange} />
                         </div>
-                        <div className="grid grid-cols-2 mx-auto">
-                            <label htmlFor="password">Password</label>
-                            <input className="bg-black/10 text-p rounded-full px-[16px] py-[8px]" type="password" id="password" name="password" onChange={handleChange} />
+                        <div className="flex justify-between items-center mx-[16px]">
+                            <label className="" htmlFor="password">Password</label>
+                            <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="password" id="password" name="password" onChange={handleChange} />
                         </div>
-                        <div className="flex gap-[16px] mt-[32px]">
-                            <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-black hover:shadow-xl active:opacity-75 w-[230px] border-[2px] font-bold" onClick={handleLogin}>Login
+                        <div className="flex justify-center gap-[16px] mt-[32px]">
+                            <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-p hover:shadow-xl active:opacity-75 md:w-[200px] w-[100px] border-[2px] font-bold" onClick={handleLogin}>Login
                             </button>
                             <div className="relative">
-                                <p className="text-alert absolute top-[-32px]">Non sei ancora registrato?</p>
-                                <button className="mr-[40px] shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 w-[230px]" onClick={handleRegistration}>Registrati
+                                <p className="text-alert absolute md:top-[-32px] top-[-40px] md:text-p text-small">Non sei ancora registrato?</p>
+                                <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 md:w-[200px] w-[100px]" onClick={handleRegistration}>Registrati
                                 </button>
                             </div>
                         </div>

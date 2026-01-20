@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Pixelify+Sans:wght@400..700&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
 
     --color-*: initial;
@@ -16,32 +18,32 @@
 
 @layer base {
     h1 {
-        @apply text-[64px] 2xl:text-[128px] leading-[96px] 2xl:leading-[192px] font-bold;
+        @apply text-[32px] leading-[48px] md:text-[64px] md:leading-[96px] 2xl:text-[128px] 2xl:leading-[192px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
         
   }
     h2 {
-        @apply 2xl:text-[90px] 2xl:leading-[135px] text-[45px] leading-[68px] font-bold;
+        @apply 2xl:text-[90px] 2xl:leading-[135px] md:text-[45px] md:leading-[68px] text-[32px] leading-[48px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     h3 {
-        @apply 2xl:text-[64px] 2xl:leading-[96px] text-[32px] leading-[48px];
+        @apply 2xl:text-[64px] 2xl:leading-[96px] md:text-[32px] md:leading-[48px] text-[23px] leading-[35px] dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     h4 {
-        @apply 2xl:text-[45px] 2xl:leading-[68px] text-[23px] leading-[35px] font-bold;
+        @apply 2xl:text-[45px] 2xl:leading-[68px] md:text-[23px] md:leading-[35px] text-[22px] leading-[38px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     h5 {
-        @apply 2xl:text-[32px] 2xl:leading-[48px] text-[22px] leading-[38px] font-bold;
+        @apply 2xl:text-[32px] 2xl:leading-[48px] md:leading-[38px] md:text-[22px] text-[18px] leading-[30px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     h6 {
-        @apply 2xl:text-[23px] 2xl:leading-[35px] text-[18px] leading-[30px] font-bold;
+        @apply 2xl:text-[23px] 2xl:leading-[35px] md:text-[18px] md:leading-[30px] text-[15px] leading-[21px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     p {
-        @apply 2xl:text-[15px] 2xl:leading-[21px];
+        @apply md:text-[15px] md:leading-[21px] text-[10px] leading-[16px] dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     button {
@@ -51,36 +53,36 @@
 
 @layer components {
     .text-small {
-        @apply text-[11px] leading-[17px];
+        @apply md:text-[11px] md:leading-[17px] text-[8px] leading-[14px] dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-p {
-        @apply text-[15px] leading-[21px];
+        @apply md:text-[15px] md:leading-[21px] text-[10px] leading-[16px] dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
 
     .text-h1 {
-        @apply text-[64px] 2xl:text-[128px] leading-[96px2] 2xl:leading-[192px] font-bold;
+        @apply text-[32px] leading-[48px] md:text-[64px] md:leading-[96px] 2xl:text-[128px] 2xl:leading-[192px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-h2 {
-        @apply 2xl:text-[90px] 2xl:leading-[135px] text-[45px] leading-[68px] font-bold;
+        @apply 2xl:text-[90px] 2xl:leading-[135px] md:text-[45px] md:leading-[68px] text-[32px] leading-[48px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-h3 {
-        @apply 2xl:text-[64px] 2xl:leading-[96px] text-[32px] leading-[48px];
+        @apply 2xl:text-[64px] 2xl:leading-[96px] md:text-[32px] md:leading-[48px] text-[23px] leading-[35px] dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-h4 {
-        @apply 2xl:text-[45px] 2xl:leading-[68px] text-[23px] leading-[35px] font-bold;
+        @apply 2xl:text-[45px] 2xl:leading-[68px] md:text-[23px] md:leading-[35px] text-[22px] leading-[38px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-h5 {
-        @apply 2xl:text-[32px] 2xl:leading-[48px] text-[22px] leading-[38px] font-bold;
+        @apply 2xl:text-[32px] 2xl:leading-[48px] md:leading-[38px] md:text-[22px] text-[18px] leading-[30px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-h6 {
-         @apply 2xl:text-[23px] 2xl:leading-[35px] text-[18px] leading-[30px] font-bold;
+         @apply 2xl:text-[23px] 2xl:leading-[35px] md:text-[18px] md:leading-[30px] text-[15px] leading-[21px] font-bold dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-gradient {
@@ -89,3 +91,10 @@
         -webkit-text-fill-color: transparent;
   }
 }
+
+@layer theme {
+  * {
+    @apply transition-colors duration-100 ease-out;
+  }
+}
+  

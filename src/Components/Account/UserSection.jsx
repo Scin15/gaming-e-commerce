@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { modify } from "../state/user/userSlice";
+import { modify } from "../../state/user/userSlice";
 
 const UserSection = () => {
 
@@ -10,7 +10,7 @@ const UserSection = () => {
     const [text, setText] = useState({name: "", value: ""});
     const dispatch = useDispatch();
 
-    const handleChange = (e, element) => {
+    const handleChange = (e, elemennt) => {
         console.log(e.target.value);
         setText({name: element, value: e.target.value});
     }
