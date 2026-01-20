@@ -1,10 +1,6 @@
-// import ps5 from "../assets/Homepage/playstation5.png";
-// import xbox_series from "../assets/Homepage/xbox_series.png";
-// import switch2 from "../assets/Homepage/switch2.png";
 import GameCard from "./GameCard.component";
 import { useEffect, useState, useRef } from "react";
 import NavButtons from "./NavButtons.component";
-import Counter from "./counter.component";
 import { NavLink } from "react-router";
 import items from "../DataBase/Games";
 
@@ -74,16 +70,16 @@ const Home = () => {
             <div className="home text-black flex-col mt-[168px] 2xl:mx-[128px] mx-[64px]  z-0">
                 <div className="hero xl:h-screen pb-[40px]">
                     <div className={`${startAnimation ? "duration-800" : "-translate-x-50 opacity-0"}`}>
-                        <h3 className="text-gradient">Lo store di videogame definitivo</h3>
+                        <h3 className="text-gradient text-h5 md:text-h3">Lo store di videogame definitivo</h3>
                     </div>
                     <div className="title-buttons mt-[16px]">
                         <div className={`${startAnimation ? "duration-800" : "translate-x-50 opacity-0"}`}>
-                            <h1>Tutti gli ultimi titoli,<br />in un unico,<br />semplice store</h1>
+                            <h1 className="text-h4 md:text-h1">Tutti gli ultimi titoli,<br />in un unico,<br />semplice store</h1>
                         </div>
                         <div className="flex">
                             <div className="subtitle-buttons 2xl:mt-[80px] mt-[40px]">
                                 <div className={`${startAnimation ? "duration-800" : "-translate-x-50 opacity-0"}`}>
-                                    <h5>Scopri qui sotto i titoli del mese o sfoglia l'intero catalogo</h5>
+                                    <h5 className="text-h6 md:text-h5">Scopri qui sotto i titoli del mese o sfoglia l'intero catalogo</h5>
                                 </div>
                                 <div className="call-to-action flex 2xl:mt-[64px] mt-[32px] text-h6">
                                     <div className={`${startAnimation ? "duration-800" : "translate-y-50 opacity-0"}`}>
@@ -107,12 +103,12 @@ const Home = () => {
                 <div className={`flex-col text-center pt-[46px] mx-auto border-t-1 border-black/25 ${startAnimation ? "duration-800" : "translate-y-50 opacity-0"}`}>
                     <div className="title scroll-mt-[112px]" ref={targetRef}>
                         <h4 className="text-primary">I migliori del mese</h4>
-                        <h5>I migliori 20 titoli del mese in base a vendite, critica e apprezzamento del pubblico</h5>
+                        <h5 className="text-p md:text-h5">I migliori 20 titoli del mese in base a vendite, critica e apprezzamento del pubblico</h5>
                     </div>
                     <div className="buttons mt-[80px]">
                         <NavButtons page={page} setPage={setPage} maxPage={maxPage} changePage={changePage}/>
                     </div>
-                    <div className={`cards mt-[54px] grid grid-cols-3 grid-rows-2 gap-[32px] 2xl:mx-[256px] transition-all duration-[300ms] ease-in ${getAnimationClass()}`}>
+                    <div className={`cards mt-[54px] grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-[2px] md:gap-[32px] 2xl:mx-[256px] transition-all duration-[300ms] ease-in ${getAnimationClass()}`}>
                         {
                             visibleItems.map((element) => (
                                 <GameCard className="" product={element} />

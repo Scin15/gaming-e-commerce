@@ -17,7 +17,7 @@ const Header = () => {
                         <NavLink to="/">
                             <Logo />
                         </NavLink>
-                        <div className="nav-bar text-h6 uppercase ml-[64px]">
+                        <div className="hidden md:flex nav-bar text-h6 uppercase ml-[64px]">
                             <NavLink to="/" className="mr-[49px] hover:opacity-50">Home</NavLink>
                             <NavLink to="catalog" className="hover:opacity-50">Categorie</NavLink>
                         </div>
@@ -37,21 +37,7 @@ const Header = () => {
 
                             <CartIcon />
                             {count > 0 && (
-                                <span className="
-                                absolute 
-                                top-0 
-                                right-3 
-                                flex 
-                                h-5 
-                                w-5 
-                                items-center 
-                                justify-center 
-                                rounded-full 
-                                bg-primary 
-                                text-xs 
-                                font-bold 
-                                text-white
-                                ">
+                                <span className="absolute top-0 right-3 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
                                 {count}
                                 </span>
                             )}

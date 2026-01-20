@@ -77,7 +77,7 @@ const Catalog = () => {
                     <div className="buttons mt-[80px]">
                         <NavButtons page={page} setPage={setPage} maxPage={maxPage} changePage={changePage}/>
                     </div>
-                    <div className={`cards mt-[54px] grid grid-cols-3 grid-rows-2 gap-[32px] 2xl:mx-[256px] transition-all duration-[300ms] ease-in ${getAnimationClass()}`}>
+                    <div className={`cards mt-[54px] grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-[32px] 2xl:mx-[256px] transition-all duration-[300ms] ease-in ${getAnimationClass()}`}>
                         {
                             visibleItems.map((element) => (
                                 <GameCard className="" product={element} />
