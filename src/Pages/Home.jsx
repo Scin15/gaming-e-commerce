@@ -1,10 +1,4 @@
-<<<<<<< HEAD:src/Components/Home.component.jsx
-import GameCard from "./GameCard.component";
 import { useEffect, useState, useRef } from "react";
-import NavButtons from "./NavButtons.component";
-=======
-import { useEffect, useState, useRef } from "react";
->>>>>>> refs/remotes/origin/main:src/Pages/Home.jsx
 import { NavLink } from "react-router";
 import items from "../DataBase/Games";
 import { handleScroll } from "../Utils/animations";
@@ -63,20 +57,7 @@ const Home = () => {
                         <h4 className="text-primary">I migliori del mese</h4>
                         <h5 className="text-p md:text-h5">I migliori 20 titoli del mese in base a vendite, critica e apprezzamento del pubblico</h5>
                     </div>
-<<<<<<< HEAD:src/Components/Home.component.jsx
-                    <div className="buttons mt-[80px]">
-                        <NavButtons page={page} setPage={setPage} maxPage={maxPage} changePage={changePage}/>
-                    </div>
-                    <div className={`cards mt-[54px] grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-[2px] md:gap-[32px] 2xl:mx-[256px] transition-all duration-[300ms] ease-in ${getAnimationClass()}`}>
-                        {
-                            visibleItems.map((element) => (
-                                <GameCard className="" product={element} />
-                            ))
-                        }
-                    </div>    
-=======
                     <GameList items={items}></GameList>
->>>>>>> refs/remotes/origin/main:src/Pages/Home.jsx
                 </div>
             </div>
         </>
