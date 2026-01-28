@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className='min-h-screen bg-white dark:bg-black/90'>
+      <div className='min-h-screen bg-white dark:bg-black/75'>
         <Outlet />
       </div>
       <Footer />

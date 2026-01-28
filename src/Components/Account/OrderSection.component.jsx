@@ -1,13 +1,37 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router";
+import { useState, useEffect } from "react";
+import { fetchOrders } from "../../Utils/utils";
 
 const OrderSection = () => {
 
-    const orders = useSelector((state) => state.user.orders);
-    console.log("Ordini: ", orders);
+    const user = useSelector((state) => state.user);
+    const [order, setOrder] = useState([]);
+    const [load, setLoad] = useState(false);
 
-    // gli ordini da dove arrivano?
-    // slice dello stato utente o slice dedicato?
+    useEffect(() => {
+
+        setLoad(true);
+        const loadOrder = async () => {
+            try {
+                const result = await fetchOrders(user.accessToken);
+                setOrder(result);
+                setLoad(false);
+            } catch (err) {
+                setOrder([]);
+                setLoad(false);
+            }
+        }
+        loadOrder();
+    }, [])
+
+    if (load) {
+        return (
+            <>
+                <h5>Loading orders...</h5>
+            </>
+        )
+    }
 
     return (
         <>
@@ -16,20 +40,21 @@ const OrderSection = () => {
             </div>
             <div className="flex flex-col items-start gap-[32px] mx-auto  mt-[40px] max-w-[512px]">
                 {
-                orders ? orders.map((element) => {
+                order.length > 0 ? order.map((element) => {
                     return (
                         <div className="flex gap-[16px]">
                             <div className="max-w-[256px] overflow-hidden rounded-[18px] ">
                                 <NavLink>
-                                    <img className="w-full h-full hover:scale-110 transition-transform duration-300" src="" alt="" />
+                                    <img className="w-full h-full hover:scale-110 transition-transform duration-300" alt="" />
                                 </NavLink>
                             </div>
                             <div className="flex flex-col items-start">
-                                <h5>{element.product_title}</h5>
+                                <h5>{element.title}</h5>
                                 <h6>{element.price}</h6>
-                                <p>{element.platform_desc}</p>
-                                <p>{element.id}</p>
-                                <p>{`${element.date.getDate()}/${element.date.getMonth() + 1}/${element.date.getFullYear()}`}</p>
+                                <p>{element.quantity}</p>
+                                <p>{element.state.desc}</p>
+                                <p>{element.payment.desc}</p>
+                                <p>{element.placed_at}</p>
                             </div>
                         </div>
                     )

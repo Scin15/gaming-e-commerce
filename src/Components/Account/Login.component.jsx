@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from 'react-router';
+import { useNavigate, NavLink } from 'react-router';
 import { useDispatch } from "react-redux";
 import { login } from "../../state/user/userSlice";
-import Register from "./Register.component";
 
 const Login = () => {
 
@@ -114,16 +113,8 @@ const Login = () => {
     return (
         <>
             <div className="flex flex-col items-center text-p">
-
-                {/* registration && 
-                <div className="absolute left-1/2 -translate-x-1/2 bg-white min-h-100 min-w-200 shadow-xl z-100">
-                    <Register />
-                    <button onClick={handleRegistration}>Torna al login</button>
-                </div> */
-                }
-
                 <h4 className="text-center">Login</h4>
-                <div className="flex justify-center">
+                <div className="flex flex-col justify-center">
                     <p className='text-alert'>
                         {loginErr.error && loginErr.message}
                     </p>
@@ -149,8 +140,10 @@ const Login = () => {
                             </button>
                             <div className="relative">
                                 <p className="text-alert absolute md:top-[-32px] top-[-40px] md:text-p text-small">Non sei ancora registrato?</p>
-                                <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 md:w-[200px] w-[100px]" onClick={handleRegistration}>Registrati
-                                </button>
+                                <NavLink to="/register">
+                                    <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 md:w-[200px] w-[100px]">Registrati
+                                    </button>
+                                </NavLink>
                             </div>
                         </div>
 

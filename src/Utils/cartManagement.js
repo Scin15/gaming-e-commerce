@@ -1,5 +1,5 @@
-import { increment, decrement } from "../state/counter/counterSlice";
-import { add, remove } from "../state/cart/cartSlice";
+import { increment, decrement, reset } from "../state/counter/counterSlice";
+import { add, remove, removeAll } from "../state/cart/cartSlice";
 
 const addItem = (item, dispatch) => {
     dispatch(increment());
@@ -11,7 +11,12 @@ const removeItem = (id, dispatch) => {
     dispatch(decrement());
 }
 
+const removeAllItem = (dispatch) => {
+    dispatch(removeAll());
+    dispatch(reset());
+}
 export {
     addItem,
     removeItem,
+    removeAllItem,
 }

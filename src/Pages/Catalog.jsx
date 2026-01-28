@@ -1,26 +1,41 @@
 import { useState, useEffect, useMemo } from "react";
-import items from "../DataBase/Games";
 import FilterBar from "../Components/FilterBar.component";
 import categories from "../DataBase/Categories";
 import GameList from "../Components/GameList.component";
 import { useSearchParams } from "react-router";
 import { getSubstrings } from "../Utils/utils";
+import { fetchProducts } from "../Utils/utils";
 
 const Catalog = () => {
 
     // potrei usare useMemo per tenermi in memoria l'array completo dei giochi
 
-    const products = useMemo(()=> items, [items]);
-
-    const [productsDisplay, setProductsDisplay] = useState(products);
-    const [filter, setFilter] = useState(0);
+    const [products, setProducts] = useState([])
+    const [productsDisplay, setProductsDisplay] = useState([]);
+    const [filter, setFilter] = useState("");
     const [searchParams] = useSearchParams();
     const [loading, setLoading] = useState(false);
 
+    console.log("Filtro:", filter);
+
     useEffect(() => {
-        let filtered = [... items];
-        if( filter != 0) {
-            filtered = filtered.filter((element) => element.category_id == filter);
+        const loadProducts = async () => {
+            try {
+                const result = await fetchProducts();
+                if (result) setProducts(result);
+            } catch (err) {
+                throw new Error(err);
+            }
+            
+        }
+        loadProducts();
+    }, [])
+
+    useEffect(() => {
+        let filtered = [... products];
+        console.log(filtered);
+        if( filter != "" && filter != "all") {
+            filtered = filtered.filter((element) => element.category[0].tag === filter);
             }
 
         // per la funzione cerca uso una Regex.
@@ -44,7 +59,7 @@ const Catalog = () => {
         }
 
         setProductsDisplay(filtered);
-    }, [filter, searchParams])
+    }, [filter, searchParams, products])
 
     return (
         <>
@@ -53,7 +68,7 @@ const Catalog = () => {
                     <div>
                         <FilterBar categories={categories} handleFilter={setFilter} />
                     </div>
-                    <GameList items={productsDisplay} />
+                    <GameList key={filter} items={productsDisplay} />
                 </div>
             </div>
         </>

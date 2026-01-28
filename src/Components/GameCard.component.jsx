@@ -13,10 +13,10 @@ const GameCard = ({ item, className}) => {
                 <div className="card flex-col text-left text-h6 mb-[64px]">
                     <div className="relative overflow-hidden rounded-[18px]">
                         <div className="absolute left-[8px] top-[8px] z-100 rounded-full bg-white">
-                            <PlatformIcon width={32} height={32} id={item.platform_id}/>
+                            <PlatformIcon width={32} height={32} id={item.platform.tag}/>
                         </div>
-                        <NavLink to={`/gameDetail/${item.id}`}>
-                            <img className=" w-full h-full hover:scale-110 active:opacity-75 transition-transform duration-300" src={item.cover_image_url} alt="" />
+                        <NavLink to={`/gameDetail/${item._id}`}>
+                            <img className=" w-full h-full hover:scale-110 active:opacity-75 transition-transform duration-300" src={item.img_cover} alt={"cover image: " + item.title}/>
                         </NavLink>
                     </div>
                     <div className="info mt-[16px]">

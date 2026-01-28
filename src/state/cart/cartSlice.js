@@ -16,7 +16,7 @@ const cartSlice = createSlice({
             product.quantity = 1;
             console.log("Prodotto: ", product);
             const productIndex = state.findIndex((element) => {
-                return (element.id == product.id);
+                return (element._id == product._id);
             })
             console.log("Indice trovato:", productIndex);
 
@@ -33,10 +33,10 @@ const cartSlice = createSlice({
         },
         remove: (state, action) => {
             // logica per capire se c'è già il prodotto
-            const id = action.payload;
-            console.log("Id prodotto: ", id);
+            const _id = action.payload;
+            console.log("Id prodotto: ", _id);
             const productIndex = state.findIndex((element) => {
-                return (element.id == id);
+                return (element._id == _id);
             })
             console.log("Indice trovato:", productIndex);
 
@@ -55,9 +55,13 @@ const cartSlice = createSlice({
             console.log("Eliminato prodotto dal carrello");
 
         },
+        removeAll: (state) => {
+            console.log("Resetto il carrello...");
+            state.splice(0, state.length);
+        },
     },
 });
 
-export const { add, remove } = cartSlice.actions;
+export const { add, remove, removeAll } = cartSlice.actions;
 
 export default cartSlice.reducer;

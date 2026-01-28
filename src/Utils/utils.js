@@ -13,6 +13,55 @@ const getSubstrings = (str, minLength) => {
     return substrings;
 }
 
+const fetchProducts = async (id) => {
+    const url = id ? "http://localhost:3000/product?id=" + id : "http://localhost:3000/product";
+    const result = await (await fetch(url)).json();
+    if (result) {
+        console.log("Prodotti trovati:", result);
+        return(result);
+    } else {
+        console.log("Prodotti non trovati");
+        return([]);
+    }
+}
+
+const deleteProducts = async () => {
+    const result = await fetch("http://localhost:3000/product/all", {
+        method: "DELETE"
+    });
+    if (result) {
+        window.alert("Prodotti cancellati con successo!");
+        setLoad(true);
+    } else {
+        window.alert("Errore nella cancellazione dei prodotti");
+    }
+}
+
+const fetchOrders = async (accessToken) => {
+    try {
+        const result = await fetch("http://localhost:3000/order", {
+            method: "GET",
+            credentials : "include",
+            headers: {
+                "content-type" : "application/json",
+                authorization: `Bearer ${accessToken}`
+            }
+        })
+
+        const order = await result.json();
+        
+        console.log("Risposta:", result);
+        console.log("Body risposta", order);
+        return order;
+
+    } catch (err) {
+        throw new Error(err);
+    }
+
+} 
+
 export {
     getSubstrings,
+    fetchProducts,
+    fetchOrders,
 }

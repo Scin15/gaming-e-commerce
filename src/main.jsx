@@ -9,6 +9,7 @@ import Home from './Pages/Home';
 import Catalog from './Pages/Catalog.jsx';
 import Cart from './Pages/Cart.jsx';
 import Account from './Pages/Account.jsx';
+import Register from './Pages/Register.jsx';
 import GameDetail from './Pages/GameDetail.jsx';
 import ScrollToTop from './Components/ScrollToTop.component.jsx';
 
@@ -24,6 +25,7 @@ createRoot(document.getElementById('root')).render(
             <Route path='catalog' element={<Catalog />}></Route>
             <Route path='cart' element={<Cart />}></Route>
             <Route path='account' element={<Account />}></Route>
+            <Route path='register' element={<Register />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

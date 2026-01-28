@@ -1,44 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-    // id: 0,
-    // name: "Marco",
-    // surname: "Scinetti",
-    // email: "marco.scinetti@gmail.com",
-    // address: "Via valeriana 69, 23015",
-    // accessToken: "0490dsfadaa",
-    // refreshToken: null,
-    // orders: [
-    //     {
-    //         id: 0,
-    //         product_id: 0,
-    //         product_title: "Resident Evil",
-    //         price: 50,
-    //         platform_id: 0,
-    //         platform_desc: "Steam",
-    //         date: new Date("04/16/2024"),
-    //         state: "Received",
-    //         payment_method: "VISA",
-    //         address: "Via Valeriena 69, Dubino, 23015"
-    //     },
-    //     {
-    //         id: 1,
-    //         product_id: 2,
-    //         product_title: "Donkey Kong Bananza",
-    //         price: 79.99,
-    //         platform_id: 4,
-    //         platform_desc: "Switch 2",
-    //         date: new Date("04/16/2024"), 
-    //         state: "Received",
-    //         payment_method: "VISA",
-    //         address: "Via Valeriena 69, Dubino, 23015"
-    //     },
-    // ]
-};
-
-// Devo loggare l'utente. 
-// Cosa uso? Id univoco, nome, cognome, email, indirizzo
-// Ordini da inserire qui con informazioni utente?
+const initialState = {};
 
 const userSlice = createSlice({
     name: "user",
@@ -56,6 +18,8 @@ const userSlice = createSlice({
             state.address = action.payload.address;
             state.accessToken = action.payload.accessToken;
             state.discount = action.payload.discount;
+            state.role = action.payload.role;
+            state.order = action.payload.order
         },
         logout: (state, action) => {
            

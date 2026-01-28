@@ -1,20 +1,20 @@
 
 const categories = [
     {
-        id: 0,
-        name: "tutto",
+        tag: "all",
+        name: "All",
     },
     {
-        id: 1,
-        name: "sparatutto",
+        tag: "fps",
+        name: "Sparatutto",
     },
     {
-        id: 2,
-        name: "gdr",
+        tag: "gdr",
+        name: "Giochi di Ruolo",
     },
     {
-        id: 3,
-        name: "azione",
+        tag: "act",
+        name: "Azione",
     },
 
 ];

@@ -13,12 +13,12 @@ const GameList = ( { items } ) => {
     const [direction, setDirection] = useState("right");
     const [phase, setPhase] = useState("idle");
 
-    // hook per gestire lo scroll verso la sezione top 20
-    const targetRef = useRef(null);
-    
+    console.log("Pagina attuale", page);
+
     const itemsPerPage = 6;
     const start = page * itemsPerPage;
     const visibleItems = items.slice(start, start + itemsPerPage);
+    // se ho 8 elementi con pagine da 6, restituisce 1 come maxPage
     const maxPage = Math.ceil(items.length / itemsPerPage) - 1;
 
     useEffect(()=>{
@@ -36,7 +36,7 @@ const GameList = ( { items } ) => {
                 {
 
                     visibleItems.map((element) => (
-                        <GameCard className="" item={element} key={element.id} />
+                        <GameCard className="" item={element} key={element._id} />
                     ))
 
                 }
