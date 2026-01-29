@@ -13,7 +13,6 @@ const Login = () => {
     const [mailErr, setMailErr] = useState(false);
     const [passErr, setPassErr] = useState(false);
     const [loginErr, setLoginErr] = useState({error: false, message: ""});
-    const [registration, setRegistration] = useState(false);
 
     const handleLogin = async e => {
         e.preventDefault()  //per gestire il form non in automatico
@@ -50,22 +49,6 @@ const Login = () => {
                 })
             })).json();
             
-            // inserisco codice fittizio come se avessi effettuato il login per testare il corretto funzionamento dello stato con Redux
-
-            // if (email == "pinco@pallo.com" & password == "pippo") {
-            //         result = {
-            //         accessToken: "ade4565456",
-            //         name: "Pinco",
-            //         surname: "Pallo",
-            //         email: "pinco@pallo.com",
-            //         id: 0,
-            //         address: "Via Brombeis, 80122 Napoli(NA)",
-            //         discount: 0.2,
-            //     }
-            // } else {
-            //     throw(new Error("Utenza non registrata"));
-            // }
-
         } catch (error) {
             setLoginErr({
                 error: true,
@@ -76,13 +59,6 @@ const Login = () => {
         
         console.log("Access token ottenuto:", result.accessToken);
             if(result.accessToken){
-                // setUser({
-                //     accessToken : result.accessToken,
-                //     mail: result.mail,
-                //     id: result.id,
-                //     name: result.name,
-                //     surname: result.surname,
-                // })
 
                 dispatch(login(result));
                 navigate("/account");
@@ -94,11 +70,6 @@ const Login = () => {
                 })
                 console.log(result.error)
             }
-    }
-
-    const handleRegistration = (e) => {
-        e.preventDefault();
-        setRegistration((state) => !state);
     }
 
     // funzione per gestire ogni input da tastiera

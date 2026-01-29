@@ -1,18 +1,14 @@
 import { useParams } from "react-router";
-import resident_evil from "../assets/Giochi/Resident Evil Requiem/resident_evil.png";
 import { increment } from "../state/counter/counterSlice";
 import { add } from "../state/cart/cartSlice";
 import { useDispatch } from "react-redux";
 import PlatformIcon from "../Components/PlatformIcon";
-import { useEffect, useState } from "react";
-import { fetchProducts } from "../Utils/utils";
+import { useProduct } from "../hooks/productHook";
 
 const GameDetail = () => {
 
     const dispatch = useDispatch();
     const params = useParams();
-    const [product, setProduct] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     const handleClick = () => {
         console.log("Gioco ad aggiungere: ", product);
@@ -20,19 +16,10 @@ const GameDetail = () => {
         dispatch(increment());
     }
 
-    useEffect(() => {
-        const loadProduct = async () => {
-            const result = await fetchProducts(params.id);
-            if (result) {
-                console.log("Risultato fetch:", result[0]);
-                setProduct(result[0]);
-                setLoading(false);
-            }
-        }
-        loadProduct();
-    }, [])
+    const products = useProduct(params.id);
+    const product = products[0];
 
-    if (loading) {
+    if (products.length === 0) {
         return (
             <>
                 <div className="flex justify-center mt-[90px]">

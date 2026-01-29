@@ -1,6 +1,3 @@
-// import ps5 from "../assets/Homepage/playstation5.png";
-// import xbox_series from "../assets/Homepage/xbox_series.png";
-// import switch2 from "../assets/Homepage/switch2.png";
 import GameCard from "../Components/GameCard.component";
 import { useEffect, useState, useRef } from "react";
 import NavButtons from "../Components/NavButtons.component";
@@ -8,24 +5,27 @@ import { getAnimationClass } from "../Utils/animations";
 
 const GameList = ( { items } ) => {
 
-    const [startAnimation, setStartAnimation] = useState(false)
     const [page, setPage] = useState(0);
     const [direction, setDirection] = useState("right");
     const [phase, setPhase] = useState("idle");
 
-    console.log("Pagina attuale", page);
+    items = items || [];
 
     const itemsPerPage = 6;
     const start = page * itemsPerPage;
     const visibleItems = items.slice(start, start + itemsPerPage);
     // se ho 8 elementi con pagine da 6, restituisce 1 come maxPage
     const maxPage = Math.ceil(items.length / itemsPerPage) - 1;
-
-    useEffect(()=>{
-        setTimeout(()=> {
-            setStartAnimation(true)
-        }, 500)
-    }, [])
+    
+    if (!items || items instanceof Array && items.length === 0) {
+        return (
+            <>
+                <div className="mt-[80px]">
+                    <h4>Nessun prodotto trovato</h4>
+                </div>
+            </>
+        )
+    }
 
     return (
         <>

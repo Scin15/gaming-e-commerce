@@ -1,4 +1,3 @@
-import { NavLink } from "react-router";
 import CartList from "../Components/Cart/CartList.component";
 import CartListTotal from "../Components/Cart/CartListTotal.component";
 import { useSelector } from "react-redux";
@@ -6,60 +5,24 @@ import { useDispatch } from "react-redux";
 import { removeAllItem } from "../Utils/cartManagement";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { getTotalPrice } from "../Utils/utils";
 
 const Cart = () => {
 
     // const products = userCart.products;
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
     const products = useSelector((state) => state.cart);
     const discount = useSelector((state) => state.user.discount);
     const user = useSelector((state) => state.user);
-    const dispatch = useDispatch();
+    
     const [address, setAddress] = useState("");
     const [payment, setPayment] = useState("");
     const [addressErr, setAddressErr] = useState(false);
     const [paymentErr, setPaymentErr] = useState(false);
 
-    console.log("indirizzo", address);
-    console.log("pagamento", payment);
-
-    // Per storicizzare un ordine devo cliccare su avanti.
-    // Vengo portato alla pagina "Completa ordine" che mi chiede i dettagli mancanti.
-    // Ho già in canna l'utente e l'access token, i prodotti come array. Questi sono salvati nello stato globale con Redux
-    
-    // Questa la struttura finale che deve avere l'ordine inviato
-
-    // {
-    //     "_id": "6974ea9248ee0bb54deab3bc",
-    //         "order": {
-    //         "title": "PlayStation 5",
-    //         "price": 54.99,
-    //         "quantity": 2,
-    //         "state": {
-    //         "tag": "acc",
-    //         "desc": "Ordine spedito e in consegna"
-    //         },
-    //         "address": "Via Roma 123, 20100 Milano, Italia",
-    //         "payment": {
-    //         "tag": "msc",
-    //         "desc": "Mastercard"
-    //         }
-    //     }
-    // }
-
-    // posso usare un elemento dialog modale, che interrompe l'interazione con il resto della pagina
-
-    console.log("Prodotti: ", products);
-
-    const getTotal = () => {
-        var sum = 0;
-        for (let i=0; i<products.length; i++) {
-            sum += products[i].price * products[i].quantity;
-        }
-        return sum;
-    }
-
-    const total = getTotal();
+    const total = getTotalPrice(products);
 
     const openDialog = () => {
         if (products.length === 0) {
@@ -117,7 +80,6 @@ const Cart = () => {
                 }
             } )
         }
-        console.log("Ordine che sto effettuando:", order);
         
         let result = null;
 

@@ -14,8 +14,16 @@ const getSubstrings = (str, minLength) => {
 }
 
 const fetchProducts = async (id) => {
+
     const url = id ? "http://localhost:3000/product?id=" + id : "http://localhost:3000/product";
-    const result = await (await fetch(url)).json();
+    let result = null;
+
+    try {
+        result = await (await fetch(url)).json();
+    } catch (err) {
+        throw err;
+    }
+
     if (result) {
         console.log("Prodotti trovati:", result);
         return(result);
@@ -58,10 +66,19 @@ const fetchOrders = async (accessToken) => {
         throw new Error(err);
     }
 
-} 
+}
+
+const getTotalPrice = (products) => {
+    let sum = 0;
+    for (let i=0; i<products.length; i++) {
+        sum += products[i].price * products[i].quantity;
+    }
+    return sum;
+}
 
 export {
     getSubstrings,
     fetchProducts,
     fetchOrders,
+    getTotalPrice,
 }

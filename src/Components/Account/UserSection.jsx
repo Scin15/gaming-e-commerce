@@ -32,7 +32,6 @@ const UserSection = () => {
     }
 
     if(user.id == null || !user) {
-        console.log("Utente:", user, user.id);
         return (
             <div className="mt-[168px]">
                 <h1>Utente non loggato</h1>
@@ -42,23 +41,23 @@ const UserSection = () => {
 
     return (
         <>
-                    <div className="grid grid-cols-3 gap-2 mt-10 mx-auto max-w-[512px]">
-                            <p className="font-bold">Nome</p>
-                            <input type="text" placeholder={user.name} readOnly={activeChange == "name" ?false : true} className={`focus:outline-0 ${activeChange == "name" ? "outline-1 focus:outline-1" : ""}`} onChange={e => handleChange(e, "name")}/>
-                            <button onClick={() => activateChange("name")}>Modifica</button>
+            <div className="grid grid-cols-3 gap-2 mt-10 mx-auto max-w-[512px]">
+                    <p className="font-bold">Nome</p>
+                    <input type="text" placeholder={user.name} readOnly={activeChange == "name" ?false : true} className={`focus:outline-0 ${activeChange == "name" ? "outline-1 focus:outline-1" : ""}`} onChange={e => handleChange(e, "name")}/>
+                    <button onClick={() => activateChange("name")}>Modifica</button>
 
-                            <p className="font-bold">Cognome</p>
-                            <input type="text" placeholder={user.surname} readOnly={activeChange == "surname" ?false : true} className={`focus:outline-0 ${activeChange == "surname" ? "outline-1 focus:outline-1" : ""}`} onChange={e => handleChange(e, "surname")}/>
-                            <button onClick={() => activateChange("surname")}>Modifica</button>
+                    <p className="font-bold">Cognome</p>
+                    <input type="text" placeholder={user.surname} readOnly={activeChange == "surname" ?false : true} className={`focus:outline-0 ${activeChange == "surname" ? "outline-1 focus:outline-1" : ""}`} onChange={e => handleChange(e, "surname")}/>
+                    <button onClick={() => activateChange("surname")}>Modifica</button>
 
-                            <p className="font-bold">E-mail</p>
-                            <input type="text" placeholder={user.email} readOnly={activeChange == "email" ?false : true} className={`focus:outline-0 ${activeChange == "email" ? "outline-1 focus:outline-1" : ""}`} onChange={e => handleChange(e, "email")}/>
-                            <button onClick={() => activateChange("email")}>Modifica</button>
+                    <p className="font-bold">E-mail</p>
+                    <input type="text" placeholder={user.email} readOnly={activeChange == "email" ?false : true} className={`focus:outline-0 ${activeChange == "email" ? "outline-1 focus:outline-1" : ""}`} onChange={e => handleChange(e, "email")}/>
+                    <button onClick={() => activateChange("email")}>Modifica</button>
 
-                            <p className="font-bold">Indirizzo</p>
-                            <input type="text" placeholder={user.address} readOnly={activeChange == "address" ?false : true} className={`focus:outline-0 ${activeChange == "address" ? "outline-1 focus:outline-1" : ""}`} onChange={e => handleChange(e, "address")}/>
-                            <button onClick={() => activateChange("address")}>Modifica</button>   
-                    </div>
+                    <p className="font-bold">Indirizzo</p>
+                    <input type="text" placeholder={user.address} readOnly={activeChange == "address" ?false : true} className={`focus:outline-0 ${activeChange == "address" ? "outline-1 focus:outline-1" : ""}`} onChange={e => handleChange(e, "address")}/>
+                    <button onClick={() => activateChange("address")}>Modifica</button>   
+            </div>
         </>
     )
 }
