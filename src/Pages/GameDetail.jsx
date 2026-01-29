@@ -1,6 +1,5 @@
 import { useParams } from "react-router";
-import { increment } from "../state/counter/counterSlice";
-import { add } from "../state/cart/cartSlice";
+import { addItem } from "../Utils/cartManagement";
 import { useDispatch } from "react-redux";
 import PlatformIcon from "../Components/PlatformIcon";
 import { useProduct } from "../hooks/productHook";
@@ -9,17 +8,10 @@ const GameDetail = () => {
 
     const dispatch = useDispatch();
     const params = useParams();
+    const product = useProduct(params.id)[0];
 
-    const handleClick = () => {
-        console.log("Gioco ad aggiungere: ", product);
-        dispatch(add(product));
-        dispatch(increment());
-    }
-
-    const products = useProduct(params.id);
-    const product = products[0];
-
-    if (products.length === 0) {
+    // se useProduct ritorna array vuoto, allora product = undefined e renderizzo un loading
+    if (!product) {
         return (
             <>
                 <div className="flex justify-center mt-[90px]">
@@ -47,7 +39,7 @@ const GameDetail = () => {
                         <img src={product.img_cover} alt="" className="hover:opacity-75 focus:absolute focus:opacity-100 focus:top-[168px] focus:left-0 hover:cursor-pointer" tabIndex={0} />
                         <div className="flex flex-col gap-[32px] items-center mt-[24px]">
                             <h5>{`${product.price} €`}</h5>
-                            <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 w-[100px] md:w-[200px] sm:text-h6 text-small" onClick={handleClick}>Aggiungi al carrello</button>
+                            <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 w-[100px] md:w-[200px] sm:text-h6 text-small" onClick={() => addItem(product, dispatch)}>Aggiungi al carrello</button>
                         </div>
                     </div>
                     <div className="flex flex-col gap-[24px]">

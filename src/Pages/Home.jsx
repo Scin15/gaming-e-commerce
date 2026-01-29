@@ -8,6 +8,7 @@ const Home = () => {
 
     // hook per gestire lo scroll verso la sezione top 20
     const targetRef = useRef(null);
+    // carico tutti i prodotti dal server
     const products = useProduct();
 
     return (

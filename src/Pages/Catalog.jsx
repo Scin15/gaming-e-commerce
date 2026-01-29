@@ -7,6 +7,7 @@ import { useProduct, useFilterProduct } from "../hooks/productHook";
 const Catalog = () => {
 
     const [filter, setFilter] = useState("");
+    // carico tutti i prodotti dal server
     const products = useProduct();
 
     // filtra l'array prodotti usando lo stato filtro
