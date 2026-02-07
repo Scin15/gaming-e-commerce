@@ -1,8 +1,9 @@
+import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import { fetchProducts } from "../../Utils/utils";
+import { fetchProducts } from "../../utils/utils";
 
 const AdminPanel = () => {
-
+    const user = useSelector((state) => state.user);
     const [products, setProducts] = useState([]);
     const [load, setLoad] = useState(false);
 
@@ -30,8 +31,10 @@ const AdminPanel = () => {
 
     const result = await fetch("http://localhost:3000/product", {
         method: "POST",
+        credentials : "include",
         headers: {
-            "Content-Type": "application/json"
+            "content-type" : "application/json",
+            authorization: `Bearer ${user.accessToken}`
         },
         body: JSON.stringify(body)
     });

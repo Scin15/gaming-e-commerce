@@ -16,7 +16,7 @@ const cartSlice = createSlice({
             product.quantity = 1;
             console.log("Prodotto: ", product);
             const productIndex = state.findIndex((element) => {
-                return (element._id == product._id);
+                return (element.id == product.id);
             })
             console.log("Indice trovato:", productIndex);
 
@@ -33,10 +33,10 @@ const cartSlice = createSlice({
         },
         remove: (state, action) => {
             // logica per capire se c'è già il prodotto
-            const _id = action.payload;
-            console.log("Id prodotto: ", _id);
+            const id = action.payload;
+            console.log("Id prodotto: ", id);
             const productIndex = state.findIndex((element) => {
-                return (element._id == _id);
+                return (element.id == id);
             })
             console.log("Indice trovato:", productIndex);
 

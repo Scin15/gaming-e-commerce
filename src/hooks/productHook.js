@@ -1,51 +1,47 @@
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router";
-import { fetchProducts } from "../Utils/utils";
-import { getSubstrings } from "../Utils/utils";
+import { fetchProducts, readGames } from "../utils/utils";
+import { getSubstrings } from "../utils/utils";
 
 const useProduct = (_id) => {
     
     const [products, setProducts] = useState([]);
-
     useEffect(()=>{
-        
-        fetchProducts(_id)
+        readGames(_id)
         .then((e)=> setProducts(e))
-        .catch((err)=> {throw new Error("Error load products")});
-        
+        .catch((err) => {
+            console.log(err.message);
+            setProducts([]);
+        });
     }, [])
-
     return products;
 }
 
-const useFilterProduct = (products, filter) => {
+const useFilterProduct = (products, filter, searchString) => {
 
     const [productsDisplay, setProductsDisplay] = useState([]);
-    const [searchParams] = useSearchParams();
 
     useEffect(() => {
 
         let filtered = [... products];
-        // console.log(filtered);
+        console.log(filtered);
         if( filter != "" && filter != "all") {
-            filtered = filtered.filter((element) => element.category[0].tag === filter);
+            filtered = filtered.filter((element) => element.genres[0].slug === filter);
             }
 
         // per la funzione cerca uso una Regex.
         /* non case sensitive, anche più parole, se ci sono almeno 4 caratteri di fila che matchano l'imput, parolaInput|,  */
-        const searchString = searchParams.get("search");
 
         if(searchString) {
 
-            const expression = new RegExp(searchString, "i");
+            const expression = new RegExp(searchString, "i"); // flag "i" per rendere case-insensitive
             const chunks = getSubstrings(searchString, 4);
 
             filtered = filtered.filter((element => {
-                return (expression.test(element.title)) || 
+                return (expression.test(element.name)) || 
                 (
                     chunks.some(chunk => {
                      const regex = new RegExp(chunk);
-                     return regex.test(element.title);
+                     return regex.test(element.name);
                     })
                 ); 
             }));
@@ -53,7 +49,7 @@ const useFilterProduct = (products, filter) => {
 
         setProductsDisplay(filtered);
         
-    }, [filter, products, searchParams])
+    }, [filter, products, searchString])
 
     return productsDisplay;
 }

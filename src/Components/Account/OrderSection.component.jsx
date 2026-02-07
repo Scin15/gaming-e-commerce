@@ -1,13 +1,15 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router";
 import { useState, useEffect } from "react";
-import { fetchOrders } from "../../Utils/utils";
+import { fetchOrders } from "../../utils/utils";
 
 const OrderSection = () => {
 
     const user = useSelector((state) => state.user);
     const [order, setOrder] = useState([]);
     const [load, setLoad] = useState(false);
+
+    // questo diventa un custom hook
 
     useEffect(() => {
 

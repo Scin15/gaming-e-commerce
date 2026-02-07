@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import DecrementIcon from "../Icons/DecrementIcon.component.";
-import { removeItem } from "../../Utils/cartManagement";
+import { removeItem } from "../../utils/cartManagement";
 
     const CartList = ( {list, className } ) => {
 
@@ -23,7 +23,7 @@ import { removeItem } from "../../Utils/cartManagement";
                         return (
                             <>
                                 <div>
-                                    <p>{element.title}</p>
+                                    <p>{element.name}</p>
                                 </div>
                                 <div>
                                     <p className="">{element.price ? `${element.price} €` : ""}</p>
@@ -32,7 +32,7 @@ import { removeItem } from "../../Utils/cartManagement";
                                     <p className="font-bold">{element.quantity ? `x ${element.quantity}`: ""}</p>
                                 </div>
                                 <div>
-                                    <button className="text-black text-h6 rounded-full bg-black/5 hover:bg-white active:opacity-50" onClick={() => removeItem(element._id, dispatch)}>
+                                    <button className="text-black text-h6 rounded-full bg-black/5 hover:bg-white active:opacity-50" onClick={() => removeItem(element.id, dispatch)}>
                                         <DecrementIcon />
                                     </button>
                                 </div>

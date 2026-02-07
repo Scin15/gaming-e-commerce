@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { NavLink } from "react-router";
-import { handleScroll } from "../Utils/animations";
-import GameList from "../Components/GameList.component";
+import { handleScroll } from "../utils/animations";
+import GameList from "../components/GameList.component";
 import { useProduct } from "../hooks/productHook";
 
 const Home = () => {
@@ -10,6 +10,7 @@ const Home = () => {
     const targetRef = useRef(null);
     // carico tutti i prodotti dal server
     const products = useProduct();
+    console.log("Prodotti", products);
 
     return (
         <>
@@ -43,7 +44,7 @@ const Home = () => {
                         <h4 className="text-primary">I migliori del mese</h4>
                         <h5 className="text-p md:text-h5">I migliori 20 titoli del mese in base a vendite, critica e apprezzamento del pubblico</h5>
                     </div>
-                    <GameList items={products}></GameList>
+                    <GameList items={products} itemsPerPage={6}></GameList>
                 </div>
             </div>
         </>

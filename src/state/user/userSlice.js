@@ -24,12 +24,16 @@ const userSlice = createSlice({
         logout: (state, action) => {
            
         },
-        modify: (state, action) => {
-            state[action.payload.name] = action.payload.value;
+        update: (state, action) => {
+            const {name, surname, address} = action.payload;
+            console.log("Nomi passati alla funzione update:", action)
+            state.name = name || state.name;
+            state.surname = surname || state.surname;
+            state.address = address || state.address;
         }
     },
 });
 
-export const { login, logout, modify } = userSlice.actions;
+export const { login, logout, update } = userSlice.actions;
 
 export default userSlice.reducer;

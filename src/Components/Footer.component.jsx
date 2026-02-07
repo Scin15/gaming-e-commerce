@@ -1,9 +1,5 @@
-//import { NavLink } from "react-router"
-import { useSelector, useDispatch } from "react-redux";
 
 const Footer = () => {
-
-    const count = useSelector((state) => state.counter.value)
 
     return (
         <>

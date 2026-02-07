@@ -58,18 +58,18 @@ const Login = () => {
         }
         
         console.log("Access token ottenuto:", result.accessToken);
-            if(result.accessToken){
+        if(result.accessToken){
 
-                dispatch(login(result));
-                navigate("/account");
-    
-            }else {
-                setLoginErr({
-                    error: true,
-                    message: result.error
-                })
-                console.log(result.error)
-            }
+            dispatch(login(result));
+            navigate("/account");
+
+        }else {
+            setLoginErr({
+                error: true,
+                message: result.error
+            })
+            console.log(result.error)
+        }
     }
 
     // funzione per gestire ogni input da tastiera

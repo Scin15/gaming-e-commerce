@@ -13,6 +13,30 @@ const getSubstrings = (str, minLength) => {
     return substrings;
 }
 
+async function readGames(_id) {
+    const idString = _id ? "/" + _id : "";
+    const urlString = `https://api.rawg.io/api/games${idString}?key=${import.meta.env.VITE_RAWG_KEY}`;
+    try {
+        const response = await fetch(urlString);
+        if (!response.ok) {
+            throw new Error(response.status);
+        }
+        let data = await response.json();
+        console.log(data);
+        // se sto cercando per id restituisco comunque un array, altrimenti estraggo la proprietà result (array type)
+        data = _id ? Array(data) : data.results;
+        // aggiungo la prop price con un numero random perchè non la restituisce l'API
+        data = data.map((e) => {
+            e.price = Number((Math.random()*100).toFixed(2));
+            return e;
+            })
+        console.log("Trovati i giochini!", data);
+        return data;
+    } catch (e) {
+        throw e;
+    }
+}
+
 const fetchProducts = async (id) => {
 
     const url = id ? "http://localhost:3000/product?id=" + id : "http://localhost:3000/product";
@@ -58,12 +82,12 @@ const fetchOrders = async (accessToken) => {
 
         const order = await result.json();
         
-        console.log("Risposta:", result);
-        console.log("Body risposta", order);
+        // console.log("Risposta:", result);
+        // console.log("Body risposta", order);
         return order;
 
     } catch (err) {
-        throw new Error(err);
+        throw err;
     }
 
 }
@@ -81,4 +105,5 @@ export {
     fetchProducts,
     fetchOrders,
     getTotalPrice,
+    readGames,
 }

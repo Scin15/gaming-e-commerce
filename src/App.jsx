@@ -2,7 +2,7 @@ import './App.css'
 import Header from './Components/Header.component'
 import Footer from './Components/Footer.component'
 import { Outlet} from 'react-router'
-import { handleTheme } from './Utils/darkMode'
+import { handleTheme } from './utils/darkMode'
 
 function App() {
 

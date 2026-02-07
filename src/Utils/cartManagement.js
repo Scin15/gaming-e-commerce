@@ -53,7 +53,7 @@ const createOrderArray = (products, user, address, payment) => {
         order.push({
             _id: user.id,
             order: {
-                title: products[i].title,
+                title: products[i].name,
                 price: products[i].price,
                 quantity: products[i].quantity,
                 state: {

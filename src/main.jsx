@@ -5,11 +5,11 @@ import App from './App.jsx'
 import { Provider } from "react-redux";
 import { store } from "./state/store.js";
 import { BrowserRouter, Routes, Route } from 'react-router';
-import Home from './Pages/Home';
-import Catalog from './Pages/Catalog.jsx';
-import Cart from './Pages/Cart.jsx';
-import Account from './Pages/Account.jsx';
-import Register from './Pages/Register.jsx';
+import Home from './pages/Home';
+import Catalog from './pages/Catalog.jsx';
+import Cart from './pages/Cart.jsx';
+import Account from './pages/Account.jsx';
+import Register from './pages/Register.jsx';
 import GameDetail from './Pages/GameDetail.jsx';
 import ScrollToTop from './Components/ScrollToTop.component.jsx';
 

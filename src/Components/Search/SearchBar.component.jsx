@@ -9,6 +9,7 @@ const SearchBar = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [searchString, setSearchString] = useState("");
+
     const onChange = (e) => {
         setSearchString(e.target.value);
         console.log(searchString);
@@ -19,9 +20,10 @@ const SearchBar = () => {
         navigate(`/catalog/?search=${searchString}`);
     }
     
+    // da capire se posso togliere il return e settare lo stato setSearchString come "" sempre, dopo l'if
     const handleCleanSearch = (location) => {
         console.log("Location:", location.pathname);
-        if(location.pathname == "/catalog" || location.pathname == "/catalog/") {
+        if(location.pathname === "/catalog" || location.pathname === "/catalog/") {
             setSearchString("");
             navigate(`/catalog/?search=`);
             return;

@@ -5,16 +5,16 @@ const categories = [
         name: "All",
     },
     {
-        tag: "fps",
-        name: "Sparatutto",
+        tag: "action",
+        name: "Action",
     },
     {
-        tag: "gdr",
-        name: "Giochi di Ruolo",
+        tag: "shooter",
+        name: "Fps",
     },
     {
-        tag: "act",
-        name: "Azione",
+        tag: "puzzle",
+        name: "Puzzle",
     },
 
 ];

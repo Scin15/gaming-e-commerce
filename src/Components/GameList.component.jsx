@@ -1,23 +1,22 @@
-import GameCard from "../Components/GameCard.component";
+import GameCard from "./GameCard.component";
 import { useEffect, useState, useRef } from "react";
-import NavButtons from "../Components/NavButtons.component";
-import { getAnimationClass } from "../Utils/animations";
+import NavButtons from "./NavButtons.component";
+import { getAnimationClass } from "../utils/animations";
 
-const GameList = ( { items } ) => {
+const GameList = ( { items, itemsPerPage } ) => {
 
     const [page, setPage] = useState(0);
     const [direction, setDirection] = useState("right");
     const [phase, setPhase] = useState("idle");
 
     items = items || [];
-
-    const itemsPerPage = 6;
+    
     const start = page * itemsPerPage;
     const visibleItems = items.slice(start, start + itemsPerPage);
     // se ho 8 elementi con pagine da 6, restituisce 1 come maxPage
     const maxPage = Math.ceil(items.length / itemsPerPage) - 1;
     
-    if (!items || items instanceof Array && items.length === 0) {
+    if (items.length === 0) {
         return (
             <>
                 <div className="mt-[80px]">
@@ -36,7 +35,7 @@ const GameList = ( { items } ) => {
                 {
 
                     visibleItems.map((element) => (
-                        <GameCard className="" item={element} key={element._id} />
+                        <GameCard className="" item={element} key={element.id} />
                     ))
 
                 }

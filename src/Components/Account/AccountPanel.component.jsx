@@ -8,7 +8,7 @@ import AdminPanel from "./AdminPanel.component";
 const AccountPanel = () => {
 
     const user = useSelector((state) => state.user);
-    console.log("Ruolo dell'utente loggato:", user)
+    console.log("Ruolo dell'utente loggato:", user);
     const [filter, setFilter] = useState("prf");
 
     const categories = [
@@ -31,10 +31,8 @@ const AccountPanel = () => {
         switch(filter) {
             case "prf": 
                 return <UserSection />;
-                break;
             case "ord":
                 return <OrderSection />;
-                break;
             default: 
                 return <AdminPanel />;
         }
