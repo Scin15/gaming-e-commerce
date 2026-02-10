@@ -5,7 +5,7 @@ import App from './App.jsx'
 import { Provider } from "react-redux";
 import { store } from "./state/store.js";
 import { BrowserRouter, Routes, Route } from 'react-router';
-import Home from './pages/Home';
+import Home from './pages/Home.jsx';
 import Catalog from './pages/Catalog.jsx';
 import Cart from './pages/Cart.jsx';
 import Account from './pages/Account.jsx';
