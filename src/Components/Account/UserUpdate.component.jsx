@@ -11,7 +11,7 @@ export default function UserUpdate({user}) {
 
     function handleClose(e) {
         e.preventDefault();
-        document.querySelector("dialog").close();
+        document.getElementById("update-dialog").close();
     }
 
     async function handleUpdate(e) {
@@ -25,8 +25,8 @@ export default function UserUpdate({user}) {
         }
         
         dispatch(update({name, surname, address}));
-        window.alert("Successo" + result);
-        document.querySelector("dialog").close();
+        document.getElementById("update-dialog").close();
+        document.getElementById("confirm-dialog").showModal();
     }
 
     return (

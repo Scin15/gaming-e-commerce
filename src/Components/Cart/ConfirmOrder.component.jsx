@@ -13,15 +13,18 @@ const ConfirmOrder = ({products, discount, user}) => {
 
     const total = getTotalPrice(products);
     
-    const [address, setAddress] = useState("");
+    const [address, setAddress] = useState(user.address ?? "");
     const [payment, setPayment] = useState("");
     const [addressErr, setAddressErr] = useState(false);
     const [paymentErr, setPaymentErr] = useState(false);
     const [loading, setLoading] = useState(false);
 
+    // const confirmDialog = document.getElementById("confirm-dialog");
+    // confirmDialog?.showModal();
+
     const closeDialog = (e) => {
         e.preventDefault();
-        document.querySelector("dialog").close();
+        document.getElementById("order-dialog").close();
     }
     
     const handlePayment = async (e) => {
@@ -55,12 +58,11 @@ const ConfirmOrder = ({products, discount, user}) => {
         }
 
         // rimuovo i prodotti dal carrello e chiudo il dialog
-        window.alert("Ordine effettuato con successo!");
-        dispatch(removeAllItem);
-        document.querySelector("dialog").close();
+        // window.alert("Ordine effettuato con successo!");
         setLoading(false);
-
-
+        dispatch(removeAllItem);
+        document.getElementById("order-dialog").close();
+        document.getElementById("confirm-dialog").showModal();
     }
 
     if (loading) {
@@ -79,7 +81,7 @@ const ConfirmOrder = ({products, discount, user}) => {
                 <form action="" className="flex flex-col gap-[16px]">
                     <div className="group">
                         <label htmlFor="address">Indirizzo:</label>
-                        <input className="peer" type="text" placeholder="Address" name="address" required onChange={e=>setAddress(e.currentTarget.value)} />
+                        <input className="peer" type="text" placeholder="address" name="address" required onChange={e=>setAddress(e.currentTarget.value)} value={address}/>
                         {addressErr && <p className="text-alert text-small">Inserisci un indirizzo</p>}
                     </div>
                     <div>

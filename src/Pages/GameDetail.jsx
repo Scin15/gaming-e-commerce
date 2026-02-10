@@ -3,6 +3,7 @@ import { addItem } from "../utils/cartManagement";
 import { useDispatch } from "react-redux";
 import PlatformIcon from "../components/PlatformIcon";
 import { useProduct } from "../hooks/productHook";
+import { div, img } from "framer-motion/client";
 
 const GameDetail = () => {
 
@@ -49,28 +50,36 @@ const GameDetail = () => {
                         {<PlatformIcon width={64} height={64} id={product.platform?.tag}/>}
                     </div>
                     <div className="">
-                        <h5 className="object-center">{product.title}</h5>
+                        <h5 className="object-center">{product.name}</h5>
                     </div>
                 </div>
 
 
                 <div className="gap-[8px] md:gap-[32px] grid grid-cols-2">
                     <div className="flex-col gap-[24px]">
-                        <img src={product.background_image} alt="" className="hover:opacity-75 focus:absolute focus:opacity-100 focus:top-[168px] focus:left-0 hover:cursor-pointer" tabIndex={0} />
+                        <img src={product.background_image} alt={`${product.className} image`} className="hover:opacity-75 focus:absolute focus:opacity-100 focus:top-[168px] focus:left-0 hover:cursor-pointer" tabIndex={0} />
                         <div className="flex flex-col gap-[32px] items-center mt-[24px]">
                             <h5>{`${product.price} €`}</h5>
                             <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 w-[100px] md:w-[200px] sm:text-h6 text-small" onClick={() => addItem(product, dispatch)}>Aggiungi al carrello</button>
                         </div>
                     </div>
                     <div className="flex flex-col gap-[24px]">
-                        <div className="grid grid-rows-2 grid-cols-2 gap-[8px] md:gap-[32px]">
-                            {
-                            product.img_misc?.map((element) => {
-                                return (
-                                  <img key={element._id} src={element} alt="" className="hover:opacity-75 focus:absolute focus:top-[168px] focus:left-0 focus:opacity-100 t-0 hover:cursor-pointer" tabIndex={0}  />  
-                                )
-                            })
-                            }
+                        <div className="flex flex-col">
+                            <img src={product.background_image_additional} alt={`${product.className} secondary-image`} className="hover:opacity-75 focus:absolute focus:opacity-100 focus:top-[168px] focus:left-0 hover:cursor-pointer" tabIndex={0} />
+                            {/* {
+                            product.short_screenshots ? 
+                                product.short_screenshots.map((element) => {
+                                    return (
+                                    <img key={element.id} src={element.image } alt="" className="hover:opacity-75 focus:absolute focus:top-[168px] focus:left-0 focus:opacity-100 t-0 hover:cursor-pointer" tabIndex={0}  />  
+                                    )
+                                }) :
+                                <>
+                                    <img src="" alt="not found" />
+                                    <img src="" alt="not found" />
+                                    <img src="" alt="not found" />
+                                    <img src="" alt="not found" />
+                                </>
+                            } */}
                             
                         </div>
                         <div className="">

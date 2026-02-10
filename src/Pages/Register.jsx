@@ -134,27 +134,27 @@ const Register = () => {
                 </div>
                 <div className="flex justify-center mt-[80px] ">
                     <form className="flex flex-col gap-[16px]" action="">
-                        <div className="flex justify-between items-center mx-[16px]">
+                        <div className="flex justify-between items-center mx-[16px] gap-[16px]">
                             <label className="" htmlFor="name">Nome</label>
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="text" id="name" name="name" onChange={handleChange} value={name}/>
                         </div>
-                        <div className="flex justify-between items-center mx-[16px]">
+                        <div className="flex justify-between items-center mx-[16px] gap-[16px]">
                             <label className="" htmlFor="surname">Cognome</label>
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="text" id="surname" name="surname" onChange={handleChange} value={surname} />
                         </div>
-                        <div className="flex justify-between items-center mx-[16px]">
+                        <div className="flex justify-between items-center mx-[16px] gap-[16px]">
                             <label className="" htmlFor="email">E-mail</label>
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="text" id="email" name="email" onChange={handleChange} value={email}/>
                         </div>
-                        <div className="flex justify-between items-center mx-[16px]">
+                        <div className="flex justify-between items-center mx-[16px] gap-[16px]">
                             <label className="" htmlFor="password">Password</label>
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="password" id="password" name="password" onChange={handleChange} value={password}/>
                         </div>
-                        <div className="flex justify-center gap-[16px] mt-[32px]">
-                            <div className="relative">
-                                <p className="text-alert absolute md:top-[-32px] top-[-40px] md:text-p text-small">Non sei ancora registrato?</p>
-                                    <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 md:w-[200px] w-[100px]" onClick={handleRegister}>Registrati
-                                    </button>
+                        <div className="flex justify-center gap-[16px]">
+                            <div className="">
+                                <p className="text-alert text-center md:text-p text-small mb-[8px]">Non sei ancora registrato?</p>
+                                <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 md:w-[200px] w-[100px]" onClick={handleRegister}>Registrati
+                                </button>
                             </div>
                         </div>
 

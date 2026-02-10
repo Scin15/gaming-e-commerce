@@ -39,7 +39,7 @@ const Home = () => {
                         </div>
                 </div>
                 </div>  
-                <div className={`flex-col text-center pt-[46px] mx-auto border-black/25 dark:border-white/25`}>
+                <div className={`flex-col text-center pt-[46px] mx-auto border-black/25 dark:border-white/25 2xl:px-[128px] px-[64px] pt-[168px]`}>
                     <div className="title scroll-mt-[112px]" ref={targetRef}>
                         <h4 className="text-primary">I migliori del mese</h4>
                         <h5 className="text-p md:text-h5">I migliori 20 titoli del mese in base a vendite, critica e apprezzamento del pubblico</h5>
