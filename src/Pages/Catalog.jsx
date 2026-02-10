@@ -1,7 +1,7 @@
 import { useState } from "react";
-import FilterBar from "../components/FilterBar.component";
+import FilterBar from "../Components/FilterBar.component";
 import categories from "../DataBase/Categories";
-import GameList from "../components/GameList.component";
+import GameList from "../Components/GameList.component";
 import { useProduct, useFilterProduct } from "../hooks/productHook";
 import { useSearchParams } from "react-router";
 

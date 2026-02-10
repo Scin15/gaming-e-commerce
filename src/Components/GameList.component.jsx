@@ -1,7 +1,7 @@
 import GameCard from "./GameCard.component";
 import { useEffect, useState, useRef } from "react";
 import NavButtons from "./NavButtons.component";
-import { getAnimationClass } from "../utils/animations";
+import { getAnimationClass } from "../Utlis/animations";
 
 const GameList = ( { items, itemsPerPage } ) => {
 

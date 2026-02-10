@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { updateUser } from "../../utils/user";
+import { updateUser } from "../../Utlis/user";
 import { useDispatch } from "react-redux";
 import { update } from "../../state/user/userSlice";
 

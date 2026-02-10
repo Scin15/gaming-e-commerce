@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 import AccountPanel from "../Components/Account/AccountPanel.component";
 import Login from "../Components/Account/Login.component";
 import { useState, useEffect } from "react";
-import { fetchProducts } from "../utils/utils";
+import { fetchProducts } from "../Utlis/utils";
 
 const Account = () => {
 

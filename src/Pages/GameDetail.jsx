@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
-import { addItem } from "../utils/cartManagement";
+import { addItem } from "../Utlis/cartManagement";
 import { useDispatch } from "react-redux";
-import PlatformIcon from "../components/PlatformIcon";
+import PlatformIcon from "../Components/PlatformIcon";
 import { useProduct } from "../hooks/productHook";
 import { div, img } from "framer-motion/client";
 

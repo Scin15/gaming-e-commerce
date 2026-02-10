@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import DecrementIcon from "../Icons/DecrementIcon.component.";
-import { removeItem } from "../../utils/cartManagement";
+import { removeItem } from "../../Utlis/cartManagement";
 
     const CartList = ( {list, className } ) => {
 

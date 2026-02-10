@@ -1,10 +1,10 @@
 import CartListTotal from "./CartListTotal.component";
 import { useDispatch } from "react-redux";
-import { removeAllItem } from "../../utils/cartManagement";
+import { removeAllItem } from "../../Utlis/cartManagement";
 import { useState } from "react";
-import { getTotalPrice } from "../../utils/utils";
-import { addOrder } from "../../utils/cartManagement";
-import { createOrderArray } from "../../utils/cartManagement";
+import { getTotalPrice } from "../../Utlis/utils";
+import { addOrder } from "../../Utlis/cartManagement";
+import { createOrderArray } from "../../Utlis/cartManagement";
 
 const ConfirmOrder = ({products, discount, user}) => {
 

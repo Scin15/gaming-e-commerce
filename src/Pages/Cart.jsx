@@ -1,9 +1,9 @@
 import CartList from "../Components/Cart/CartList.component";
-import CartListTotal from "../components/Cart/CartListTotal.component";
+import CartListTotal from "../Components/Cart/CartListTotal.component";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-import { getTotalPrice } from "../utils/utils";
-import ConfirmOrder from "../components/Cart/ConfirmOrder.component";
+import { getTotalPrice } from "../Utlis/utils";
+import ConfirmOrder from "../Components/Cart/ConfirmOrder.component";
 
 const Cart = () => {
 

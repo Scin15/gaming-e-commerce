@@ -1,6 +1,6 @@
 import LeftArrow from "./Icons/LeftArrow.component";
 import RightArrow from "./Icons/RightArrow.component";
-import { changePage } from "../utils/animations";
+import { changePage } from "../Utlis/animations";
 
 const NavButtons = ({ page, maxPage, setPage, setDirection, setPhase, phase }) => {
 

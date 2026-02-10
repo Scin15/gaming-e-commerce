@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router";
 import PlatformIcon from "./PlatformIcon";
-import { addItem } from "../utils/cartManagement";
+import { addItem } from "../Utlis/cartManagement";
 
 const GameCard = ({ item, className}) => {
 

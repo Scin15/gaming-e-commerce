@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import { fetchProducts } from "../../utils/utils";
+import { fetchProducts } from "../../Utlis/utils";
 
 const AdminPanel = () => {
     const user = useSelector((state) => state.user);

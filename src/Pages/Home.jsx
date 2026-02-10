@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { NavLink } from "react-router";
-import { handleScroll } from "../utils/animations";
-import GameList from "../components/GameList.component";
+import { handleScroll } from "../Utlis/animations";
+import GameList from "../Components/GameList.component";
 import { useProduct } from "../hooks/productHook";
 
 const Home = () => {

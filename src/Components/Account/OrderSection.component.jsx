@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router";
 import { useState, useEffect } from "react";
-import { fetchOrders } from "../../utils/utils";
+import { fetchOrders } from "../../Utlis/utils";
 
 const OrderSection = () => {
 

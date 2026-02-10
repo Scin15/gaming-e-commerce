@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { fetchProducts, readGames } from "../utils/utils";
-import { getSubstrings } from "../utils/utils";
+import { fetchProducts, readGames } from "../Utlis/utils";
+import { getSubstrings } from "../Utlis/utils";
 
 const useProduct = (_id) => {
     

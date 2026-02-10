@@ -1,4 +1,4 @@
-import { handleTheme } from "../utils/darkMode";
+import { handleTheme } from "../Utlis/darkMode";
 import NightIcon from "./Icons/NightIcon.component";
 import DayIcon from "./Icons/DayIcon.component";
 

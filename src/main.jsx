@@ -11,7 +11,7 @@ import Cart from './Pages/Cart.jsx';
 import Account from './Pages/Account.jsx';
 import Register from './Pages/Register.jsx';
 import GameDetail from './Pages/GameDetail.jsx';
-import ScrollToTop from './components/ScrollToTop.component.jsx';
+import ScrollToTop from './Components/ScrollToTop.component.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
