@@ -10,8 +10,8 @@ import Catalog from './pages/Catalog.jsx';
 import Cart from './pages/Cart.jsx';
 import Account from './pages/Account.jsx';
 import Register from './pages/Register.jsx';
-import GameDetail from './Pages/GameDetail.jsx';
-import ScrollToTop from './Components/ScrollToTop.component.jsx';
+import GameDetail from './pages/GameDetail.jsx';
+import ScrollToTop from './components/ScrollToTop.component.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
