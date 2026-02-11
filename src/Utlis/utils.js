@@ -39,7 +39,7 @@ async function readGames(_id) {
 
 const fetchProducts = async (id) => {
 
-    const url = id ? "http://localhost:3000/product?id=" + id : "http://localhost:3000/product";
+    const url = id ? `${import.meta.env.VITE_END_POINT}/product?id=` + id : `${import.meta.env.VITE_END_POINT}/product`;
     let result = null;
 
     try {
@@ -58,7 +58,7 @@ const fetchProducts = async (id) => {
 }
 
 const deleteProducts = async () => {
-    const result = await fetch("http://localhost:3000/product/all", {
+    const result = await fetch(`${import.meta.env.VITE_END_POINT}/product/all`, {
         method: "DELETE"
     });
     if (result) {
@@ -71,7 +71,7 @@ const deleteProducts = async () => {
 
 const fetchOrders = async (accessToken) => {
     try {
-        const result = await fetch("http://localhost:3000/order", {
+        const result = await fetch(`${import.meta.env.VITE_END_POINT}/order`, {
             method: "GET",
             credentials : "include",
             headers: {

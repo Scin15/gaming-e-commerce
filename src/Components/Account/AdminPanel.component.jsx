@@ -29,7 +29,7 @@ const AdminPanel = () => {
 
     console.log("Body che sto inviando al server:", body);
 
-    const result = await fetch("http://localhost:3000/product", {
+    const result = await fetch(`${import.meta.env.VITE_END_POINT}/product`, {
         method: "POST",
         credentials : "include",
         headers: {

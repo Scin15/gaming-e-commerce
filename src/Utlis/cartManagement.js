@@ -20,7 +20,7 @@ const addOrder = async (element, user) => {
     let result = null;
 
     try {
-    result = await fetch("http://localhost:3000/order", {
+    result = await fetch(`${import.meta.env.VITE_END_POINT}/order`, {
         method: "POST",
         credentials : "include",
         headers: {

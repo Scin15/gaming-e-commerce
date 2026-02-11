@@ -2,7 +2,7 @@
 async function updateUser(user, data) {
     let result = null;
     try {
-        result = await fetch("http://localhost:3000/user", {
+        result = await fetch(`${import.meta.env.VITE_END_POINT}/user`, {
             method: "PUT",
             credentials : "include",
             headers: {
