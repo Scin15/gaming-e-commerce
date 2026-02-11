@@ -116,7 +116,7 @@ const Register = () => {
         <>
             <dialog className="p-[32px] rounded-[18px] shadow-xl m-auto backdrop:bg-black/80 dark:bg-black text-p text-center">
                 <h4>Registrazione effettuata</h4>
-                <p>Controlla la tua mail, abbiamo inviato un link per l'attivazione</p>
+                {/* <p>Controlla la tua mail, abbiamo inviato un link per l'attivazione</p> */}
                 <button onClick={closeDialog} className="rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-primary hover:shadow-xl active:bg-black/5 xl:mt-0 mt-[32px] xl:w-[258px] w-[230px] outline-[3px] outline-offset-[-3px] m-auto">Vai al login</button>
             </dialog>
             <div className="flex flex-col items-center text-p pt-[168px]">
