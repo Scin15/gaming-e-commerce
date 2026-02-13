@@ -7,11 +7,12 @@ import { fetchProducts } from "../Utlis/utils";
 const Account = () => {
 
     const user = useSelector((state) => state.user);
+    console.log("Utente", user);
 
     return (
         <>
-            <div className="pt-[168px]">
-                {user.id == null || !user ? <Login /> : <AccountPanel />}
+            <div className="pt-[168px] px-[32px]">
+                {!user.id ? <Login /> : <AccountPanel />}
             </div>
         </>
     )

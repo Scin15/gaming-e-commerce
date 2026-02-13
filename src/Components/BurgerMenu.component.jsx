@@ -14,8 +14,8 @@ const BurgerMenu = ({ menuList }) => {
 
     return (
         <>        
-            <div className="relative px-[8px] group bg-white dark:bg-black" tabIndex={0}>
-                <button className="hover:opacity-50" onClick={handleToggle}>
+            <div className="relative px-[8px] group bg-transparent" tabIndex={0}>
+                <button className="" onClick={handleToggle}>
                     {
                         toggleMenu ? <CrossIcon width="32" height="32"/> : <BurgerIcon width="32" height="32" />
                     } 

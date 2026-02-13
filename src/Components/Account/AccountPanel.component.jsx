@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../state/user/userSlice";
 import FilterBar from "../FilterBar.component";
 import UserSection from "./UserSection";
 import OrderSection from "./OrderSection.component";
@@ -10,6 +11,7 @@ const AccountPanel = () => {
     const user = useSelector((state) => state.user);
     console.log("Ruolo dell'utente loggato:", user);
     const [filter, setFilter] = useState("prf");
+    const dispatch = useDispatch();
 
     const categories = [
         {
@@ -38,11 +40,18 @@ const AccountPanel = () => {
         }
     }
 
+    function handleLogout() {
+        console.log("Eseguo il logout dell'utente", user.name);
+        dispatch(logout());
+        console.log("Utente loggato ora:", user);
+    }
+
     return (
         <>
             <div className="">
-                <div className="flex justify-center mb-[48px]">
+                <div className="flex justify-center mb-[48px] gap-[16px]">
                     <h4>{user.name}</h4>
+                    <button className="rounded-full xl:px[16px] px-[8px] py-[4] xl:py-[8px] text-p border-1 active:opacity-75" onClick={handleLogout}>Logout</button>
                 </div>
                 <div>
                     <FilterBar categories={categories} handleFilter={setFilter}/>

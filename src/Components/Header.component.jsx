@@ -22,7 +22,7 @@ const Header = () => {
 
     return (
         <>
-            <div className="absolute shadow-md h-[96px] text-p text-black fixed top-0 w-screen z-100 bg-white/75 dark:bg-black/75 dark:text-white">
+            <div className="absolute shadow-md h-[96px] text-p text-black fixed top-0 w-screen z-100 bg-white dark:bg-black dark:text-white">
                 <div className="flex justify-between items-center mx-[8px] md:mx-[40px] h-full">
                     <div className="logo-nav-bar flex justify-between items-center">
                         <NavLink className="hidden md:block" to="/">

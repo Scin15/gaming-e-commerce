@@ -1,5 +1,6 @@
 import { increment, decrement, reset } from "../state/counter/counterSlice";
 import { add, remove, removeAll } from "../state/cart/cartSlice";
+import { redirect } from "react-router";
 
 const addItem = (item, dispatch) => {
     dispatch(increment());
@@ -19,7 +20,6 @@ const removeAllItem = (dispatch) => {
 const addOrder = async (element, user) => {
     let result = null;
 
-    try {
     result = await fetch(`${import.meta.env.VITE_END_POINT}/order`, {
         method: "POST",
         credentials : "include",
@@ -38,10 +38,7 @@ const addOrder = async (element, user) => {
     }
 
     const response = await result.json();
-    return response;    
-    } catch (err) {
-        throw new Error(err.message);
-    }    
+    return response; 
 }
 
 const createOrderArray = (products, user, address, payment) => {

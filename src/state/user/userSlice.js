@@ -21,8 +21,8 @@ const userSlice = createSlice({
             state.role = action.payload.role;
             state.order = action.payload.order
         },
-        logout: (state, action) => {
-           
+        logout: () => {
+            return initialState;
         },
         update: (state, action) => {
             const {name, surname, address} = action.payload;

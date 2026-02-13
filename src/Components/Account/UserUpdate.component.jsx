@@ -31,15 +31,17 @@ export default function UserUpdate({user}) {
 
     return (
         <>
-            <form action="" className="grid grid-cols-2 ">
+            <form action="" className="grid grid-cols-2 gap-[8px]">
                 <label htmlFor="name">Nome</label>
                 <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
                 <label htmlFor="surname">Cognome</label>
                 <input type="text" name="surname" value={surname} onChange={(e) => setSurname(e.target.value)} />
                 <label htmlFor="name">Indirizzo</label>
                 <input type="text" name="address" value={address} onChange={(e) => setAddress(e.target.value)} />
-                <button onClick={handleClose}>Esci</button>
-                <button onClick={handleUpdate}>Salva</button>
+                {/* <div className="flex justify-center gap-[8px] mt-[8px] col-span-2"> */}
+                    <button className="rounded-full xl:px[16px] px-[16px] py-[8px] xl:py-[8px] text-p border-1 active:opacity-75 row-span-2 mt-[8px]" onClick={handleClose}>Esci</button>
+                    <button className="rounded-full xl:px[16px] px-[16px] py-[8px] xl:py-[8px] text-p border-1 active:opacity-75 row-span-2 mt-[8px]" onClick={handleUpdate}>Salva</button>
+                {/* </div> */}
             </form>
         </>
     )

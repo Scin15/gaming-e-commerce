@@ -19,7 +19,7 @@ const OrderSection = () => {
                 const result = await fetchOrders(user.accessToken);
                 setOrder(result);
                 setLoad(false);
-            } catch (err) {
+            } catch {
                 setOrder([]);
                 setLoad(false);
             }

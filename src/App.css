@@ -43,7 +43,7 @@
         font-family: 'Manrope', system-ui, sans-serif;
   }
     p {
-        @apply md:text-[15px] md:leading-[21px] text-[10px] leading-[16px] dark:text-white;
+        @apply md:text-[16px] md:leading-[21px] text-[16px] leading-[21px] dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
     button {
@@ -57,7 +57,7 @@
         font-family: 'Manrope', system-ui, sans-serif;
   }
     .text-p {
-        @apply md:text-[15px] md:leading-[21px] text-[10px] leading-[16px] dark:text-white;
+        @apply md:text-[16px] md:leading-[21px] text-[16px] leading-[21px] dark:text-white;
         font-family: 'Manrope', system-ui, sans-serif;
   }
 

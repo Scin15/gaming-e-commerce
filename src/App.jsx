@@ -9,6 +9,8 @@ function App() {
   // setto il tema in base al tema di sistema windows o local storage. Local storage > tema windows.
   handleTheme();
 
+  // inserisco qua refresh del token??
+
   console.log(document.documentElement.classList);
   return (
     <>

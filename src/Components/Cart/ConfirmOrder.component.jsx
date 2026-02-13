@@ -1,11 +1,11 @@
 import CartListTotal from "./CartListTotal.component";
 import { useDispatch } from "react-redux";
 import { removeAllItem } from "../../Utlis/cartManagement";
+import { logout } from "../../state/user/userSlice";
 import { useState } from "react";
 import { getTotalPrice } from "../../Utlis/utils";
 import { addOrder } from "../../Utlis/cartManagement";
 import { createOrderArray } from "../../Utlis/cartManagement";
-
 const ConfirmOrder = ({products, discount, user}) => {
 
     // const products = userCart.products;
@@ -51,6 +51,13 @@ const ConfirmOrder = ({products, discount, user}) => {
             try {
                 await addOrder(order[i], user);
             } catch (err) {
+                if (err.message === "TokenExpiredError") {
+                    console.log("Accesso scaduto");
+                    dispatch(logout());
+                    document.getElementById("order-dialog").close();
+                    document.getElementById("logout-dialog").showModal();
+                    return;
+                }
                 window.alert(`Qualcosa è andato storto...${err.message}`);
                 setLoading(false);
                 return;
