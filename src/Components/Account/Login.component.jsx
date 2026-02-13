@@ -96,7 +96,7 @@ const Login = () => {
                         {passErr && "Inserisci una password valida"}
                     </p>
                 </div>
-                <div className="flex justify-center mt-[80px] ">
+                <div className="flex justify-center mt-[32px] ">
                     <form className="flex flex-col gap-[16px]" action="">
                         <div className="flex justify-between items-center mx-[16px] gap-[16px]">
                             <label className="" htmlFor="email">E-mail</label>
@@ -106,16 +106,16 @@ const Login = () => {
                             <label className="" htmlFor="password">Password</label>
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="password" id="password" name="password" onChange={handleChange} />
                         </div>
-                        <div className="flex justify-center gap-[16px] mt-[32px]">
-                            <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-p hover:shadow-xl active:opacity-75 md:w-[200px] w-[100px] border-[2px] font-bold" onClick={handleLogin}>Login
-                            </button>
-                            <div className="relative">
-                                <p className="text-alert absolute md:top-[-32px] top-[-40px] md:text-p text-small">Non sei ancora registrato?</p>
-                                <NavLink to="/register">
-                                    <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 md:w-[200px] w-[100px]">Registrati
+                        <div className="grid grid-cols-2 gap-[16px] mt-[32px]">
+                                <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-h5 md:text-p hover:shadow-xl active:opacity-75 md:w-[200px] border-[2px] font-bold" onClick={handleLogin}>Login
+                                </button>
+                            {/* <div className="flex flex-col items-center">
+                                <p className="text-alert md:text-p text-small h-[16px]">Non sei ancora registrato?</p> */}
+                                <NavLink className="m-0 p-0 flex w-[100%]" to="/register">
+                                    <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 md:w-[200px] w-[100%] text-h5">Registrati
                                     </button>
                                 </NavLink>
-                            </div>
+                            {/* </div> */}
                         </div>
 
                     </form>

@@ -10,7 +10,7 @@ const GameCard = ({ item, className}) => {
     return (
         <>
             <div className={className ? className : ""}>
-                <div className="card flex-col text-left text-h6 mb-[64px]">
+                <div className="card flex-col text-left text-h6 mb-[32px] md:mb-[64px]">
                     <div className="relative overflow-hidden rounded-[18px]">
                         <div className="absolute left-[8px] top-[8px] z-100 rounded-full bg-white">
                             <PlatformIcon width={32} height={32} id={item.platform?.tag}/>

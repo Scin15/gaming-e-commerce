@@ -101,8 +101,8 @@ const ConfirmOrder = ({products, discount, user}) => {
                         {paymentErr && <p className="text-alert text-small">Seleziona un metodo di pagamento</p>}
                     </div>
                     <div className="flex justify-around">
-                        <button className="border-1 rounded-full px-[16px] py-[8px] text-p hover:bg-white hover:text-black" onClick={closeDialog}>Close</button>
-                        <button className="border-1 rounded-full px-[16px] py-[8px] text-p hover:bg-white hover:text-black" onClick={handlePayment}>Effettua l'ordine</button>
+                        <button className="border-1 rounded-full px-[16px] py-[8px] text-p dark:hover:bg-white dark:hover:text-black hover:text-white hover:bg-black" onClick={closeDialog}>Close</button>
+                        <button className="border-1 rounded-full px-[16px] py-[8px] text-p dark:hover:bg-white dark:hover:text-black hover:text-white hover:bg-black" onClick={handlePayment}>Effettua l'ordine</button>
                     </div>
                 </form>
             </div>

@@ -19,7 +19,7 @@ const GameList = ( { items, itemsPerPage } ) => {
     if (items.length === 0) {
         return (
             <>
-                <div className="mt-[80px]">
+                <div className="mt-[49px] md:mt-[80px]">
                     <h4>Nessun prodotto trovato</h4>
                 </div>
             </>
@@ -28,10 +28,10 @@ const GameList = ( { items, itemsPerPage } ) => {
 
     return (
         <>
-            <div className="buttons mt-[80px]">
+            <div className="buttons mt-[40px] md:mt-[80px]">
                 <NavButtons page={page} setPage={setPage} maxPage={maxPage} phase={phase} setDirection={setDirection} setPhase={setPhase}/>
             </div>
-            <div className={`cards mt-[54px] grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 md:gap-[32px] 2xl:mx-[256px] transition-all duration-[300ms] ease-in ${getAnimationClass(phase, direction)}`}>
+            <div className={`cards mt-[54px] grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-[8px] md:gap-[32px] 2xl:mx-[256px] transition-all duration-[300ms] ease-in ${getAnimationClass(phase, direction)}`}>
                 {
 
                     visibleItems.map((element) => (

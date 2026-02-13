@@ -19,7 +19,7 @@ const Catalog = () => {
 
     return (
         <>
-            <div className="pt-[168px] xl:px-[128px] px-[64px]">
+            <div className="pt-[168px] xl:px-[128px] md:px-[64px] px-[10px]">
                 <div className="flex-col">
                     <div>
                         <FilterBar categories={categories} handleFilter={setFilter} />

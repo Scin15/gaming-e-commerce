@@ -39,8 +39,8 @@ export default function UserUpdate({user}) {
                 <label htmlFor="name">Indirizzo</label>
                 <input type="text" name="address" value={address} onChange={(e) => setAddress(e.target.value)} />
                 {/* <div className="flex justify-center gap-[8px] mt-[8px] col-span-2"> */}
-                    <button className="rounded-full xl:px[16px] px-[16px] py-[8px] xl:py-[8px] text-p border-1 active:opacity-75 row-span-2 mt-[8px]" onClick={handleClose}>Esci</button>
-                    <button className="rounded-full xl:px[16px] px-[16px] py-[8px] xl:py-[8px] text-p border-1 active:opacity-75 row-span-2 mt-[8px]" onClick={handleUpdate}>Salva</button>
+                    <button className="rounded-full xl:px[16px] px-[16px] py-[8px] xl:py-[8px] text-p border-1 active:opacity-75 row-span-2 mt-[8px] dark:hover:bg-white dark:hover:text-black hover:text-white hover:bg-black" onClick={handleClose}>Esci</button>
+                    <button className="rounded-full xl:px[16px] px-[16px] py-[8px] xl:py-[8px] text-p border-1 active:opacity-75 row-span-2 mt-[8px] dark:hover:bg-white dark:hover:text-black hover:text-white hover:bg-black" onClick={handleUpdate}>Salva</button>
                 {/* </div> */}
             </form>
         </>

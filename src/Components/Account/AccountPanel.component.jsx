@@ -51,7 +51,7 @@ const AccountPanel = () => {
             <div className="">
                 <div className="flex justify-center mb-[48px] gap-[16px]">
                     <h4>{user.name}</h4>
-                    <button className="rounded-full xl:px[16px] px-[8px] py-[4] xl:py-[8px] text-p border-1 active:opacity-75" onClick={handleLogout}>Logout</button>
+                    <button className="rounded-full xl:px[16px] px-[8px] py-[4] xl:py-[8px] text-p border-1 dark:border-white border-black active:opacity-50 dark:hover:bg-white dark:hover:text-black hover:text-white hover:bg-black outline-none" onClick={handleLogout}>Logout</button>
                 </div>
                 <div>
                     <FilterBar categories={categories} handleFilter={setFilter}/>

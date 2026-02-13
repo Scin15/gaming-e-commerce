@@ -120,7 +120,7 @@ const Register = () => {
                 <button onClick={closeDialog} className="rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-primary hover:shadow-xl active:bg-black/5 xl:mt-0 mt-[32px] xl:w-[258px] w-[230px] outline-[3px] outline-offset-[-3px] m-auto">Vai al login</button>
             </dialog>
             <div className="flex flex-col items-center text-p pt-[168px]">
-                <h4 className="text-center">Register</h4>
+                <h4 className="text-center">Registrati</h4>
                 <div className="flex justify-center">
                     <p className='text-alert'>
                         {registerErr.error && registerErr.message}
@@ -132,7 +132,7 @@ const Register = () => {
                         {passErr && "Inserisci una password valida"}
                     </p>
                 </div>
-                <div className="flex justify-center mt-[80px] ">
+                <div className="flex justify-center mt-[32px] ">
                     <form className="flex flex-col gap-[16px]" action="">
                         <div className="flex justify-between items-center mx-[16px] gap-[16px]">
                             <label className="" htmlFor="name">Nome</label>
@@ -150,12 +150,9 @@ const Register = () => {
                             <label className="" htmlFor="password">Password</label>
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="password" id="password" name="password" onChange={handleChange} value={password}/>
                         </div>
-                        <div className="flex justify-center gap-[16px]">
-                            <div className="">
-                                <p className="text-alert text-center md:text-p text-small mb-[8px]">Non sei ancora registrato?</p>
-                                <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 md:w-[200px] w-[100px]" onClick={handleRegister}>Registrati
-                                </button>
-                            </div>
+                        <div className="flex justify-center gap-[16px] my-[16px]">
+                            <button className="shadow-md rounded-full xl:px[32px] px-[32px] py-[16px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 md:w-[200px] w-[100%] text-h5" onClick={handleRegister}>Registrati
+                            </button>
                         </div>
 
                     </form>
