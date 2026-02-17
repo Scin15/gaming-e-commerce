@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { updateUser } from "../../Utlis/user";
+import { setError } from "../../state/error/errorSlice";
 import { useDispatch } from "react-redux";
 import { update } from "../../state/user/userSlice";
 
@@ -18,9 +19,19 @@ export default function UserUpdate({user}) {
         e.preventDefault();
         let result = null;
         try {
-            result = await updateUser(user, {name, surname, address});
+            result = await updateUser(user, {name, surname, address})
         } catch (err) {
+            console.log(err);
+            dispatch(setError({error: true, status: 500, message: "Errore durante l'update dell'utente"}));
             window.alert("Errore: " + err.message);
+            return;
+        }
+
+        console.log(result);
+
+        if (result.status != 200) {
+            console.log("Errore!")
+            dispatch(setError({error: true, status: result.status, message: "Errore durante l'update dell'utente"}));
             return;
         }
         

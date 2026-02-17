@@ -10,7 +10,6 @@ const Home = () => {
     const targetRef = useRef(null);
     // carico tutti i prodotti dal server
     const products = useProduct();
-    console.log("Prodotti", products);
 
     return (
         <>

@@ -22,7 +22,6 @@ async function readGames(_id) {
             throw new Error(response.status);
         }
         let data = await response.json();
-        console.log(data);
         // se sto cercando per id restituisco comunque un array, altrimenti estraggo la proprietà result (array type)
         data = _id ? Array(data) : data.results;
         // aggiungo la prop price con un numero random perchè non la restituisce l'API
@@ -30,7 +29,6 @@ async function readGames(_id) {
             e.price = Number((Math.random()*100).toFixed(2));
             return e;
             })
-        console.log("Trovati i giochini!", data);
         return data;
     } catch (e) {
         throw e;
@@ -49,10 +47,8 @@ const fetchProducts = async (id) => {
     }
 
     if (result) {
-        console.log("Prodotti trovati:", result);
         return(result);
     } else {
-        console.log("Prodotti non trovati");
         return([]);
     }
 }

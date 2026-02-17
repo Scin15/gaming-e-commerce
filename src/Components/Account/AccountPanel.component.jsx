@@ -9,7 +9,6 @@ import AdminPanel from "./AdminPanel.component";
 const AccountPanel = () => {
 
     const user = useSelector((state) => state.user);
-    console.log("Ruolo dell'utente loggato:", user);
     const [filter, setFilter] = useState("prf");
     const dispatch = useDispatch();
 

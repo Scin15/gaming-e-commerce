@@ -14,7 +14,7 @@ const Catalog = () => {
     const [direction, setDirection] = useState("right");
     const [phase, setPhase] = useState("idle");
     const [filter, setFilter] = useState(0);
-
+    
     useEffect(() => {
         setProductsDisplay(items);
     }, [])

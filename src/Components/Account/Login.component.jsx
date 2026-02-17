@@ -7,7 +7,6 @@ const Login = () => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [mailErr, setMailErr] = useState(false);
@@ -57,7 +56,6 @@ const Login = () => {
             return;
         }
         
-        console.log("Access token ottenuto:", result.accessToken);
         if(result.accessToken){
 
             dispatch(login(result));
