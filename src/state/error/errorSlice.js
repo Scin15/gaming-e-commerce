@@ -7,7 +7,6 @@ const errorSlice = createSlice({
     initialState: initialState,
     reducers: {
         setError: (state, action) => {
-            console.log(action);
             const { error, status, message } = action.payload;
             if (!error || !status) {
                 throw new Error("parametri error o status non trovati");

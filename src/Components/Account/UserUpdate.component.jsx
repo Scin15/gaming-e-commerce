@@ -30,7 +30,6 @@ export default function UserUpdate({user}) {
         console.log(result);
 
         if (result.status != 200) {
-            console.log("Errore!")
             dispatch(setError({error: true, status: result.status, message: "Errore durante l'update dell'utente"}));
             return;
         }

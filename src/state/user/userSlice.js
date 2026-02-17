@@ -21,12 +21,10 @@ const userSlice = createSlice({
             state.role = action.payload.role;
             state.order = action.payload.order
         },
-        logout: () => {
-            return initialState;
-        },
+        logout: () => initialState,
         update: (state, action) => {
             const {name, surname, address} = action.payload;
-            console.log("Nomi passati alla funzione update:", action)
+            // console.log("Nomi passati alla funzione update:", action)
             state.name = name || state.name;
             state.surname = surname || state.surname;
             state.address = address || state.address;
