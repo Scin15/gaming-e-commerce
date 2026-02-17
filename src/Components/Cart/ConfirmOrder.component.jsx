@@ -51,6 +51,11 @@ const ConfirmOrder = ({products, discount, user}) => {
             try {
                 await addOrder(order[i], user);
             } catch (err) {
+                // setto l'errore nello stato di Redux
+                // se status code dell'errore = 401 ovvero unauthorized, allora il componente app mi rimanda alla schermata di login
+                // se ho un errore 400 Bad Request, allora setto il componente app per mostrare errore 400 Bad Request
+                // se ho un errore 404 Bad Request, allora setto il componente app per mostrare errore 404 Not Found
+                // se ho un errore 500 Internal Server Error, allora setto il componente app per mostrare errore 500 Internal Server Error.
                 if (err.message === "TokenExpiredError") {
                     console.log("Accesso scaduto");
                     dispatch(logout());
