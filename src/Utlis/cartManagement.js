@@ -33,8 +33,11 @@ const addOrder = async (element, user) => {
 
     if (result.status != 200) {
         console.log("Qualcosa non è andato");
+        // lancio un errore con status e messaggio di risposta
         const response = await result.json();
-        throw new Error(response.error);
+        const err = new Error(response.error);
+        err.status = result.status;
+        throw err;
     }
 
     const response = await result.json();

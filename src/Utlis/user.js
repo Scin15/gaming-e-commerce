@@ -17,9 +17,12 @@ async function updateUser(user, data) {
         })
     });
 
-    // if (result.status !== 200) {
-    //     throw new Error(result.error);
-    // }
+    if (result.status !== 200) {
+        const response = await result.json();
+        const err = new Error(response.error);
+        err.status = result.status;
+        throw err;
+    }
     
     return result;
 }

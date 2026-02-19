@@ -50,7 +50,7 @@ const AccountPanel = () => {
             <div className="">
                 <div className="flex justify-center mb-[48px] gap-[16px]">
                     <h4>{user.name}</h4>
-                    <button className="main-button" onClick={handleLogout}>Logout</button>
+                    <button className="small-button font-bold" onClick={handleLogout}>Logout</button>
                 </div>
                 <div>
                     <FilterBar categories={categories} handleFilter={setFilter}/>

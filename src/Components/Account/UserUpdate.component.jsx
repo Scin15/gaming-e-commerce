@@ -21,16 +21,7 @@ export default function UserUpdate({user}) {
         try {
             result = await updateUser(user, {name, surname, address})
         } catch (err) {
-            console.log(err);
-            dispatch(setError({error: true, status: 500, message: "Errore durante l'update dell'utente"}));
-            window.alert("Errore: " + err.message);
-            return;
-        }
-
-        console.log(result);
-
-        if (result.status != 200) {
-            dispatch(setError({error: true, status: result.status, message: "Errore durante l'update dell'utente"}));
+            dispatch(setError({error: true, status: err.status ?? 500, message: err.message}));
             return;
         }
         
@@ -49,8 +40,8 @@ export default function UserUpdate({user}) {
                 <label htmlFor="name">Indirizzo</label>
                 <input type="text" name="address" value={address} onChange={(e) => setAddress(e.target.value)} />
                 {/* <div className="flex justify-center gap-[8px] mt-[8px] col-span-2"> */}
-                    <button className="main-button" onClick={handleClose}>Esci</button>
-                    <button className="main-button" onClick={handleUpdate}>Salva</button>
+                    <button className="main-small-button border-[2px] font-bold mt-[16px]" onClick={handleClose}>Esci</button>
+                    <button className="main-small-button border-[2px] font-bold mt-[16px]" onClick={handleUpdate}>Salva</button>
                 {/* </div> */}
             </form>
         </>

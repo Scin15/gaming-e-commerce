@@ -1,5 +1,6 @@
 import CartListTotal from "./CartListTotal.component";
 import { useDispatch } from "react-redux";
+import { setError } from "../../state/error/errorSlice";
 import { removeAllItem } from "../../Utlis/cartManagement";
 import { logout } from "../../state/user/userSlice";
 import { useState } from "react";
@@ -51,26 +52,14 @@ const ConfirmOrder = ({products, discount, user}) => {
             try {
                 await addOrder(order[i], user);
             } catch (err) {
-                // setto l'errore nello stato di Redux
-                // se status code dell'errore = 401 ovvero unauthorized, allora il componente app mi rimanda alla schermata di login
-                // se ho un errore 400 Bad Request, allora setto il componente app per mostrare errore 400 Bad Request
-                // se ho un errore 404 Bad Request, allora setto il componente app per mostrare errore 404 Not Found
-                // se ho un errore 500 Internal Server Error, allora setto il componente app per mostrare errore 500 Internal Server Error.
-                if (err.message === "TokenExpiredError") {
-                    console.log("Accesso scaduto");
-                    dispatch(logout());
-                    document.getElementById("order-dialog").close();
-                    document.getElementById("logout-dialog").showModal();
-                    return;
-                }
-                window.alert(`Qualcosa è andato storto...${err.message}`);
+                // setto l'errore nello stato, che poi verrà mostrato nel componente ErrorMessage con status e messaggio
+                dispatch(setError({error: true, status: err.status ?? 500, message: err.message}));
                 setLoading(false);
                 return;
             }
         }
 
         // rimuovo i prodotti dal carrello e chiudo il dialog
-        // window.alert("Ordine effettuato con successo!");
         setLoading(false);
         dispatch(removeAllItem);
         document.getElementById("order-dialog").close();
@@ -105,9 +94,9 @@ const ConfirmOrder = ({products, discount, user}) => {
                         </select>
                         {paymentErr && <p className="text-alert text-small">Seleziona un metodo di pagamento</p>}
                     </div>
-                    <div className="flex justify-around">
-                        <button className="main-button" onClick={closeDialog}>Close</button>
-                        <button className="main-button" onClick={handlePayment}>Effettua l'ordine</button>
+                    <div className="flex justify-around gap-[8px]">
+                        <button className="main-button border-[2px]" onClick={closeDialog}>Close</button>
+                        <button className="main-button border-[2px]" onClick={handlePayment}>Effettua l'ordine</button>
                     </div>
                 </form>
             </div>

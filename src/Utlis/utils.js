@@ -66,26 +66,27 @@ const deleteProducts = async () => {
 }
 
 const fetchOrders = async (accessToken) => {
-    try {
-        const result = await fetch(`${import.meta.env.VITE_END_POINT}/order`, {
-            method: "GET",
-            credentials : "include",
-            headers: {
-                "content-type" : "application/json",
-                authorization: `Bearer ${accessToken}`
-            }
-        })
+    const result = await fetch(`${import.meta.env.VITE_END_POINT}/order`, {
+        method: "GET",
+        credentials : "include",
+        headers: {
+            "content-type" : "application/json",
+            authorization: `Bearer ${accessToken}`
+        }
+    })
 
-        const order = await result.json();
-        
-        // console.log("Risposta:", result);
-        // console.log("Body risposta", order);
-        return order;
-
-    } catch (err) {
+    if (result.status != 200) {
+        const response = await result.json();
+        const err = new Error(response.error);
+        err.status = result.status;
         throw err;
     }
 
+    const order = await result.json();
+    
+    // console.log("Risposta:", result);
+    // console.log("Body risposta", order);
+    return order;
 }
 
 const getTotalPrice = (products) => {

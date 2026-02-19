@@ -2,10 +2,13 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router";
 import { useState, useEffect } from "react";
 import { fetchOrders } from "../../Utlis/utils";
+import { useDispatch } from "react-redux";
+import { setError } from "../../state/error/errorSlice";
 
 const OrderSection = () => {
 
     const user = useSelector((state) => state.user);
+    const dispatch = useDispatch();
     const [order, setOrder] = useState([]);
     const [load, setLoad] = useState(false);
 
@@ -15,14 +18,17 @@ const OrderSection = () => {
 
         setLoad(true);
         const loadOrder = async () => {
+            let result = null;
             try {
-                const result = await fetchOrders(user.accessToken);
-                setOrder(result);
+                result = await fetchOrders(user.accessToken);
+            } catch(err) {
+                console.log(err);
                 setLoad(false);
-            } catch {
-                setOrder([]);
-                setLoad(false);
+                dispatch(setError({error: true, status: err.status ?? 500, message: err.message}));
+                return;
             }
+            setOrder(result);
+            setLoad(false);
         }
         loadOrder();
     }, [])

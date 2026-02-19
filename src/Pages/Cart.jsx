@@ -43,15 +43,15 @@ const Cart = () => {
         <>
             <dialog id="logout-dialog" className="p-[32px] rounded-[18px] shadow-xl m-auto backdrop:bg-black/80 dark:bg-black text-p text-center">
                 <h4>Sessione scaduta</h4>
-                <button onClick={closeLogout} className="rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-primary hover:shadow-xl active:bg-black/5 xl:mt-0 mt-[32px] xl:w-[258px] w-[230px] outline-[3px] outline-offset-[-3px] m-auto">Torna alla schemata di login</button>
+                <button onClick={closeLogout} className="main-small-button border-[2px] m-auto mt-[16px]">Torna alla schemata di login</button>
             </dialog>
             <dialog id="empty-dialog" className="p-[32px] rounded-[18px] shadow-xl m-auto backdrop:bg-black/80 dark:bg-black text-p text-center">
                 <h4>Carrello vuoto</h4>
-                <button onClick={closeEmpty} className="rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-primary hover:shadow-xl active:bg-black/5 xl:mt-0 mt-[32px] xl:w-[258px] w-[230px] outline-[3px] outline-offset-[-3px] m-auto">Torna al carrello</button>
+                <button onClick={closeEmpty} className="main-small-button border-[2px] m-auto mt-[16px]">Torna al carrello</button>
             </dialog>
             <dialog id="confirm-dialog" className="p-[32px] rounded-[18px] shadow-xl m-auto backdrop:bg-black/80 dark:bg-black text-p text-center">
                 <h4>Odine effettuato con successo</h4>
-                <button onClick={closeConfirm} className="rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-primary hover:shadow-xl active:bg-black/5 xl:mt-0 mt-[32px] xl:w-[258px] w-[230px] outline-[3px] outline-offset-[-3px] m-auto">Torna al carrello</button>
+                <button onClick={closeConfirm} className="main-small-button border-[2px] m-auto mt-[16px]">Torna al carrello</button>
             </dialog>
             <dialog id="order-dialog" className="p-[32px] rounded-[18px] shadow-xl m-auto backdrop:bg-black/80 dark:bg-black text-p">
                 <ConfirmOrder products={products} discount={discount} user={user} />

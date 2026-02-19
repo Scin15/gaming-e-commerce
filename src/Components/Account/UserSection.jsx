@@ -26,7 +26,7 @@ const UserSection = () => {
         <>
             <dialog id="confirm-dialog" className="p-[32px] rounded-[18px] shadow-xl m-auto backdrop:bg-black/80 dark:bg-black text-p text-center">
                 <h4>Utente aggiornato</h4>
-                <button onClick={closeConfirm} className="rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-primary hover:shadow-xl active:bg-black/5 xl:mt-0 mt-[32px] xl:w-[258px] w-[230px] outline-[3px] outline-offset-[-3px] m-auto">Torna all'utente</button>
+                <button onClick={closeConfirm} className="main-small-button m-auto mt-[16px] border-[2px]">Torna all'utente</button>
             </dialog>
             <dialog id="update-dialog" className="p-[32px] rounded-[18px] shadow-xl m-auto backdrop:bg-black/80 dark:bg-black text-p">
                 <UserUpdate user={user} />
@@ -42,7 +42,7 @@ const UserSection = () => {
                         <p className="font-bold">Indirizzo</p>
                         <p>{user.address}</p>
                 </div>
-                <button className="main-button" onClick={handleDialog}>Modifica dati</button>
+                <button className="main-button mt-[16px] font-bold" onClick={handleDialog}>Modifica dati</button>
             </div>
         </>
     )
