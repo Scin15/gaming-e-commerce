@@ -90,6 +90,15 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
   }
+    .main-button {
+      @apply rounded-full 2xl:px-[32px] px-[16px] py-[16px] 2xl:py-[16px] text-white dark:bg-black bg-black/50 hover:shadow-xl active:bg-black/50 dark:active:bg-white/50 xl:mt-0 xl:w-[258px] w-[230px] dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white;
+    }
+    .secondary-button {
+      @apply rounded-full 2xl:px-[32px] px-[16px] py-[16px] 2xl:py-[16px] text-white dark:bg-secondary bg-secondary hover:shadow-xl active:bg-black/5 xl:mt-0 xl:w-[258px] w-[230px] dark:hover:bg-white dark:hover:text-black hover:bg-white hover:text-black;
+    }
+    .fluid-button {
+      @apply rounded-full 2xl:px-[32px] px-[16px] py-[16px] 2xl:py-[16px] text-white dark:bg-black bg-black/50 hover:shadow-xl active:bg-black/50 dark:active:bg-white/50 xl:mt-0 dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white;
+    }
 }
 
 @layer theme {

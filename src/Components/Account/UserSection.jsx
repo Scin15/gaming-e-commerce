@@ -42,7 +42,7 @@ const UserSection = () => {
                         <p className="font-bold">Indirizzo</p>
                         <p>{user.address}</p>
                 </div>
-                <button className="rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-p active:opacity-50 dark:hover:bg-white dark:hover:text-black hover:text-white hover:bg-black mt-[32px] xl:w-[200px] min-w-[100px] border-[2px] m-auto dark:border-white border-black" onClick={handleDialog}>Modifica dati</button>
+                <button className="main-button" onClick={handleDialog}>Modifica dati</button>
             </div>
         </>
     )

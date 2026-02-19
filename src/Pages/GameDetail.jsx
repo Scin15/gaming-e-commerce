@@ -49,7 +49,7 @@ const GameDetail = () => {
                         <img src={product.background_image} alt={`${product.className} image`} className="hover:opacity-75 md:focus:absolute focus:opacity-100 focus:top-[168px] focus:left-0 hover:cursor-pointer order-2 md:order-1" tabIndex={0} />
                         <div className="flex flex-col gap-[16px] items-center mt-[8px] order-1 md_order-2">
                             <h5>{`${product.price} €`}</h5>
-                            <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 w-full md:w-[200px] sm:text-h6 text-p" onClick={() => addItem(product, dispatch)}>Aggiungi al carrello</button>
+                            <button className="main-button text-h6 " onClick={() => addItem(product, dispatch)}>Aggiungi al carrello</button>
                         </div>
                     </div>
                     <div className="flex flex-col gap-[24px]">

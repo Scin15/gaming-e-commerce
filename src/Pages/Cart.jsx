@@ -62,7 +62,7 @@ const Cart = () => {
 
                 <CartListTotal total={total} discount={discount ? discount : 0}></CartListTotal>
 
-                <button onClick={handleDialog} className="rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-h4 bg-primary hover:shadow-xl active:bg-primary/50 xl:mt-0 mt-[32px] xl:w-[258px] w-[230px] m-auto">Avanti
+                <button onClick={handleDialog} className="main-button mx-auto text-h6">Avanti
                 </button>
             </div>
         </>

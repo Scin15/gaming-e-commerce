@@ -105,12 +105,12 @@ const Login = () => {
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="password" id="password" name="password" onChange={handleChange} />
                         </div>
                         <div className="grid grid-cols-2 gap-[16px] mt-[32px]">
-                                <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-h5 md:text-p hover:shadow-xl active:opacity-75 md:w-[200px] border-[2px] font-bold" onClick={handleLogin}>Login
+                                <button className="fluid-button w-full" onClick={handleLogin}>Login
                                 </button>
                             {/* <div className="flex flex-col items-center">
                                 <p className="text-alert md:text-p text-small h-[16px]">Non sei ancora registrato?</p> */}
                                 <NavLink className="m-0 p-0 flex w-[100%]" to="/register">
-                                    <button className="shadow-md rounded-full xl:px[32px] px-[16px] py-[8px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 md:w-[200px] w-[100%] text-h5">Registrati
+                                    <button className="fluid-button w-full">Registrati
                                     </button>
                                 </NavLink>
                             {/* </div> */}

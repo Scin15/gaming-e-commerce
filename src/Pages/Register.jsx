@@ -151,7 +151,7 @@ const Register = () => {
                             <input className="bg-black/10 dark:bg-white/50 text-p dark:text-black rounded-full px-[16px] py-[8px]" type="password" id="password" name="password" onChange={handleChange} value={password}/>
                         </div>
                         <div className="flex justify-center gap-[16px] my-[16px]">
-                            <button className="shadow-md rounded-full xl:px[32px] px-[32px] py-[16px] xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 md:w-[200px] w-[100%] text-h5" onClick={handleRegister}>Registrati
+                            <button className="main-button" onClick={handleRegister}>Registrati
                             </button>
                         </div>
 

@@ -100,7 +100,7 @@ const AdminPanel = () => {
                         <label htmlFor="category">Categoria</label>
                         <input type="text" id="category" name="category" required className="border-1 rounded-full px-[8px]"/>
 
-                        <button className="border-1 border-black bg-primary text-p text-black rounded-[18px] px-[16px] py-[8px] mt-[16px]">Inserisci</button>
+                        <button className="main-button">Inserisci</button>
                     </form>
                 </div>
             </div>

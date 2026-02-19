@@ -32,7 +32,7 @@ import { removeItem } from "../../Utlis/cartManagement";
                                     <p className="font-bold">{element.quantity ? `x ${element.quantity}`: ""}</p>
                                 </div>
                                 <div>
-                                    <button className="text-black text-h6 rounded-full bg-black/5 hover:bg-white active:opacity-50" onClick={() => removeItem(element.id, dispatch)}>
+                                    <button className="rounded-full bg-black/5 hover:opacity-70 active:opacity-50" onClick={() => removeItem(element.id, dispatch)}>
                                         <DecrementIcon />
                                     </button>
                                 </div>

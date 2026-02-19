@@ -3,6 +3,7 @@ import { NavLink } from "react-router";
 import { handleScroll } from "../Utlis/animations";
 import GameList from "../Components/GameList.component";
 import { useProduct } from "../hooks/productHook";
+import Button from "../Components/Button.component";
 
 const Home = () => {
 
@@ -26,11 +27,12 @@ const Home = () => {
                                     </div>
                                     <div className="call-to-action flex 2xl:mt-[64px] mt-[32px] justify-center text-h6">
                                         <div className="md:block flex flex-col gap-[16px] items-center">
-                                            <button className="md:mr-[40px] shadow-md rounded-full 2xl:px[32px] px-[16px] py-[16px] 2xl:py-[16px] text-white bg-linear-to-r from-primary to-secondary hover:shadow-xl active:opacity-75 w-[230px]" onClick={() => handleScroll(targetRef)}>Titoli del mese</button>
-                                            <NavLink to="catalog">
-                                                <button className="rounded-full 2xl:px[32px] px-[16px] py-[16px] 2xl:py-[16px] text-primary hover:shadow-xl active:bg-black/5 xl:mt-0 xl:w-[258px] w-[230px] outline-[3px] outline-offset-[-3px]">Catalogo
-                                                </button>
-                                            </NavLink>
+                                            <div className="flex gap-[16px]">
+                                                <button className="secondary-button" onClick={() => handleScroll(targetRef)}>Titoli del mese</button>
+                                                <NavLink to="catalog">
+                                                    <button className="main-button border-[2px]">Catalogo</button>
+                                                </NavLink>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
