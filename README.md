@@ -5,7 +5,7 @@ Frontend di un e-commerce di titoli videoludici, con design minimal e moderno.
 Tecnologie usate:
 
 1. Framework React (rendering client side);
-2. Libreria Redux per la gestione dello stato globale: carrello, utente.
+2. Libreria Redux per la gestione dello stato globale: carrello, utente, errori.
 3. Tailiwindcss (responsive design);
 4. Figma per prototipazione e design;
 
