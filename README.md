@@ -14,8 +14,8 @@ Backend:
 1. Mongo DB per gestione utenze, catalogo, storico ordini;
 2. API per gestione registrazione e login con JWT;
 
-- Repository del back-end: https://github.com/Scin15/gaming-e-commerce-be
 - Link all'applicazione live: https://gaming-e-commerce.onrender.com
+- Repository del back-end: https://github.com/Scin15/gaming-e-commerce-be
 
 Immagini prese tramite API da https://rawg.io/;
 
