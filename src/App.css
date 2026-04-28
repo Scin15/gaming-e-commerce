@@ -12,6 +12,11 @@
     --color-tertiary: #FFC050;
     --color-black: #2C2725;
     --color-alert: #DD1515;
+    --color-gradient: conic-gradient(
+    from 90deg at 50% 50%,
+    #FF122E,
+    #FF8D28
+  );
     
     --font-sans: Manrope, system-ui ,sans-serif;
 }
@@ -91,7 +96,10 @@
         -webkit-text-fill-color: transparent;
   }
     .main-button {
-      @apply rounded-full 2xl:px-[32px] px-[16px] py-[16px] 2xl:py-[16px] text-white dark:bg-black bg-black/50 hover:shadow-xl active:bg-black/50 dark:active:bg-white/50 xl:mt-0 xl:w-[258px] w-[230px] dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white;
+      @apply rounded-full 2xl:px-[32px] px-[16px] py-[16px] 2xl:py-[16px] text-black dark:bg-white bg-black/50 hover:shadow-xl active:bg-black/50 dark:active:bg-white/50 xl:mt-0 xl:w-[258px] w-[230px] dark:hover:bg-black dark:hover:text-white hover:bg-black hover:text-white;
+    }
+    .main-button-black {
+      @apply rounded-full 2xl:px-[32px] px-[16px] py-[16px] 2xl:py-[16px] text-white bg-black hover:shadow-xl active:bg-white/50 xl:mt-0 xl:w-[258px] w-[230px] hover:bg-white hover:text-black
     }
     .main-small-button {
       @apply rounded-full 2xl:px-[16px] px-[16px] py-[16px] 2xl:py-[8px] text-white dark:bg-black bg-black/50 hover:shadow-xl active:bg-black/50 dark:active:bg-white/50 xl:mt-0 xl:w-[258px] w-[200px] dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white;

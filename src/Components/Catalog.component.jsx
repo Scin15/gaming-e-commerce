@@ -28,7 +28,7 @@ const Catalog = () => {
             }
         }, [filter])
 
-    const itemsPerPage = 6;
+    const itemsPerPage = 8;
     const start = page * itemsPerPage;
     const visibleItems = productsDisplay.slice(start, start + itemsPerPage);
     const maxPage = Math.ceil(productsDisplay.length / itemsPerPage) - 1;

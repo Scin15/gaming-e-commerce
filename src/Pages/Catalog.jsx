@@ -19,12 +19,12 @@ const Catalog = () => {
 
     return (
         <>
-            <div className="pt-[168px] xl:px-[128px] md:px-[64px] px-[10px]">
+            <div className="bg-[url(background-5.png)] dark:bg-[url(background-4.png)] pt-[168px] xl:px-[64px] md:px-[64px] px-[10px]">
                 <div className="flex-col">
                     <div>
                         <FilterBar categories={categories} handleFilter={setFilter} />
                     </div>
-                    <GameList key={filter} items={productsDisplay} itemsPerPage={6} />
+                    <GameList key={filter} items={productsDisplay} itemsPerPage={8} />
                 </div>
             </div>
         </>
