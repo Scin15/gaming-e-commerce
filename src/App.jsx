@@ -26,7 +26,7 @@ function App() {
   return (
     <>
         <Header />
-        <div className='min-h-screen bg-white dark:bg-black/75'>
+        <div className='min-h-screen bg-[url(background-5.png)] dark:bg-[url(background-4.png)]'>
             <ErrorBoundary onReset={() => navigate("/")} fallbackRender={({ error, resetErrorBoundary }) => {
                 return (
                     <div className="pt-[168px] flex flex-col items-center gap-[16px]">

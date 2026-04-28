@@ -32,13 +32,13 @@ const UserSection = () => {
                 <UserUpdate user={user} />
             </dialog>
             <div className="flex flex-col items-center">
-                <div className="grid grid-cols-2 mt-10 max-w-[512px]">
-                        <p className="font-bold">Nome</p>
-                        <p>{user.name}</p>
-                        <p className="font-bold">Cognome</p>
-                        <p>{user.surname}</p>
-                        <p className="font-bold">E-mail</p>
-                        <p className="wrap-anywhere">{user.email}</p>
+                <div className="grid grid-cols-2 mt-10 max-w-[512px] dark:bg-white/10 bg-black/30 shadow-xl rounded-[18px] p-[16px]">
+                        <p className="font-bold border-b-[1px] border-white/50">Nome</p>
+                        <p className="border-b-[1px] border-white/50">{user.name}</p>
+                        <p className="font-bold border-b-[1px] border-white/50">Cognome</p>
+                        <p className="border-b-[1px] border-white/50">{user.surname}</p>
+                        <p className="font-bold border-b-[1px] border-white/50">E-mail</p>
+                        <p className="wrap-anywhere border-b-[1px] border-white/50">{user.email}</p>
                         <p className="font-bold">Indirizzo</p>
                         <p>{user.address}</p>
                 </div>

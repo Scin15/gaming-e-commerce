@@ -17,7 +17,7 @@ const GameDetail = () => {
             return (
                 <>
                     <div className="flex justify-center mt-[90px]">
-                        <h1>Loading...</h1>
+                        <h4>Loading...</h4>
                     </div>
                 </>
             )

@@ -49,7 +49,7 @@ const AccountPanel = () => {
         <>
             <div className="">
                 <div className="flex justify-center mb-[48px] gap-[16px]">
-                    <h4>{user.name}</h4>
+                    <h5>Benvenuto: {user.name}</h5>
                     <button className="small-button font-bold" onClick={handleLogout}>Logout</button>
                 </div>
                 <div>
