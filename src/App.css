@@ -19,6 +19,10 @@
   );
     
     --font-sans: Manrope, system-ui ,sans-serif;
+
+    /* --breakpoint-xs: 30rem; */
+    /* --breakpoint-2xl: 2000; */
+    /* --breakpoint-3xl: 120rem; */
 }
 
 @layer base {
@@ -113,6 +117,26 @@
     .small-button {
       @apply rounded-full text-white bg-black/50 hover:shadow-xl active:bg-black/50 dark:active:bg-white/50 xl:mt-0 w-[100px] dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white;
     }
+
+    .card-border {
+      /* bordo soft caldo */
+      border: 1px solid rgba(255, 255, 255, 0.5);
+
+      /* profondità */
+      box-shadow:
+        0px 10px 60px rgba(66, 61, 61, 0.562),
+        0 0 0 2px rgba(241, 233, 231, 0.062); /* glow esterno leggerissimo */
+    }
+
+    .animation {
+      transform-origin: center;
+      animation: shrink linear both;
+      animation-timeline: view();
+      animation-range: exit 0% exit 80%;
+  }
+
+
+
 }
 
 @layer theme {
@@ -120,4 +144,15 @@
     @apply transition-colors duration-100 ease-out;
   }
 }
+
+  @keyframes shrink {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(0.50);
+      opacity: 0.6;
+    }
+  }
   

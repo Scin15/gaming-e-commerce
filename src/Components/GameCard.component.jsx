@@ -10,7 +10,7 @@ const GameCard = ({ item, className}) => {
     return (
         <>
             <div className={className ? className : ""}>
-                <div className=" bg-gradient-to-r from-secondary to-primary card flex-col text-left text-h6 mb-[32px] md:mb-[64px] rounded-[8px] overflow-hidden outline-[1px] outline-offset-[2px]">
+                <div className=" bg-gradient-to-r from-secondary to-primary card flex-col text-left text-h6 mb-[32px] md:mb-[64px] rounded-[8px] overflow-hidden card-border">
                     <div className="relative overflow-hidden rounded-[18px]-- 2xl:h-[300px] md:h-[200px]">
                         <div className="absolute left-[8px] top-[8px] z-100 rounded-full bg-white">
                             <PlatformIcon width={32} height={32} id={item.platform?.tag}/>

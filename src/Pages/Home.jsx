@@ -14,9 +14,9 @@ const Home = () => {
 
     return (
         <>
-            <div className="home text-black flex-col z-0">
-                <div className="bg-black bg-[url(background-3.png)] bg-cover mask-b-from-95%">
-                    <div className="hero xl:h-screen pb-[40px] 2xl:px-[128px] md:px-[64px] px-[10px] pt-[128px]">
+            <div className="home text-black flex-col -z-20 ">
+                <div className="bg-black bg-[url(background-3.png)] bg-cover mask-b-from-95%d sticky top-0 z-10">
+                    <div className="animation hero xl:h-screen pb-[40px] 2xl:px-[128px] md:px-[64px] px-[10px] pt-[128px]">
                         <h3 className="text-gradient text-center">Lo store di videogame definitivo</h3>
                         <div className="title-buttons mt-[16px]">
                             <h1 className="text-white text-center">Tutti gli ultimi titoli,<br />in un unico,<br />semplice store</h1>
@@ -39,13 +39,15 @@ const Home = () => {
                             </div>
                         </div>
                 </div>
-                </div>  
-                <div className="flex-col bg-[url(background-5.png)] dark:bg-[url(background-4.png)] text-center pt-[46px] mx-auto border-black/25 dark:border-white/25 2xl:px-[64px] md:px-[64px] px-[10px] pt-[32px]">
-                    <div className="title scroll-mt-[112px]" ref={targetRef}>
-                        <h4 className="text-primary">I migliori del mese</h4>
-                        <h5 className="text-p md:text-h5">I migliori 20 titoli del mese in base a vendite, critica e apprezzamento del pubblico</h5>
+                </div>
+                <div className="relative z-20">
+                    <div className="flex-col bg-[url(background-5.png)] dark:bg-[url(background-4.png)] text-center pt-[46px] mx-auto border-black/25 dark:border-white/25 2xl:px-[64px] md:px-[64px] px-[10px] pt-[32px]">
+                        <div className="title scroll-mt-[112px]" ref={targetRef}>
+                            <h4 className="text-primary">I migliori del mese</h4>
+                            <h5 className="text-p md:text-h5">I migliori 20 titoli del mese in base a vendite, critica e apprezzamento del pubblico</h5>
+                        </div>
+                        <GameList items={products} itemsPerPage={8}></GameList>
                     </div>
-                    <GameList items={products} itemsPerPage={8}></GameList>
                 </div>
             </div>
         </>
